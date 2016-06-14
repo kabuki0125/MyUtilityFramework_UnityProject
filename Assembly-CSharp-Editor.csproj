@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{564B1F12-4E62-B5E5-955E-A6AE30FE9D7F}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_7;UNITY_4_6;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Editor\AssetPostprocessUTF8Encode.cs" />
+     <Compile Include="Assets\Editor\NGUI\BMFontReader.cs" />
+     <Compile Include="Assets\Editor\NGUI\ComponentSelector.cs" />
+     <Compile Include="Assets\Editor\NGUI\NGUIEditorTools.cs" />
+     <Compile Include="Assets\Editor\NGUI\NGUIJson.cs" />
+     <Compile Include="Assets\Editor\NGUI\NGUIMenu.cs" />
+     <Compile Include="Assets\Editor\NGUI\NGUISelectionTools.cs" />
+     <Compile Include="Assets\Editor\NGUI\NGUISettings.cs" />
+     <Compile Include="Assets\Editor\NGUI\NGUITransformInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\SpriteSelector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIAtlasInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIAtlasMaker.cs" />
+     <Compile Include="Assets\Editor\NGUI\UICameraTool.cs" />
+     <Compile Include="Assets\Editor\NGUI\UICreateNewUIWizard.cs" />
+     <Compile Include="Assets\Editor\NGUI\UICreateWidgetWizard.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIDrawCallInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIFilledSpriteInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIFontInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIFontMaker.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIImageButtonInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UILabelInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIPanelInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIPanelTool.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIPopupListInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIScrollBarInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UISlicedSpriteInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UISliderInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UISpriteAnimationInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UISpriteInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UITextureInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UITexturePacker.cs" />
+     <Compile Include="Assets\Editor\NGUI\UITiledSpriteInspector.cs" />
+     <Compile Include="Assets\Editor\NGUI\UIWidgetInspector.cs" />
+     <Compile Include="Assets\Editor\PostProcessBuild.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXBuildFile.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXBuildPhase.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXDictionary.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXFileReference.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXGroup.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXList.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXObject.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXParser.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXProject.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXSortedDictionary.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\PBXVariantGroup.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCBuildConfiguration.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCConfigurationList.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCFileOperationQueue.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCMod.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCProject.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCSourceFile.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCTarget.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XCodeEditorMenu.cs" />
+     <Compile Include="Assets\Editor\XCodeEditor-for-Unity\XMiniJSON.cs" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Dynamic Font (AlphaClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (AlphaClip) .shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (AlphaClip).shader" />
+     <None Include="Assets\Plugins\Android\res\values\version.xml" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\GUI - Text Shader (AlphaClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Dynamic Font (SoftClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (SoftClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (SoftClip).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Dynamic Font.shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\ReadMe - 2.7.0.txt" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\3rdPartyPackages\UniRx\ReadMe.txt" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed).shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Depth.shader" />
+     <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/UnityExtensions/Unity/GUISystem/4.6.7/Standalone/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/UnityExtensions/Unity/GUISystem/4.6.7/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Editor/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Editor/dotnet2/NPOI.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OOXML">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Editor/dotnet2/NPOI.OOXML.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OpenXml4Net">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Editor/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OpenXmlFormats">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Editor/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0C3E57E3-B9EC-D5DF-B6EA-9946E4079882}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{CCFDE254-CD0E-0662-56CF-0AC08D7B0589}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
