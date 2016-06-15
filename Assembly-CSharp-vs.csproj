@@ -369,6 +369,7 @@
      <Compile Include="Assets\Scripts\Net\NetCommand\ReqestAPI\ReqApiLoginPlayer.cs" />
      <Compile Include="Assets\Scripts\Net\NetConnectManager.cs" />
      <Compile Include="Assets\Scripts\Net\NetRequestManager.cs" />
+     <Compile Include="Assets\Scripts\Net\ServerNameHelper.cs" />
      <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />
      <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Dynamic Font (AlphaClip).shader" />
