@@ -61,13 +61,13 @@ public class NetConnector : MonoBehaviour, IDisposable
 	/// <param name="info">通信情報</param>
 	public void StartConnectGet(NetConnectInfo info)
 	{
-		Debug.Log("[NetConnection] Start Connect GET : " + info.Url);
+		Debug.Log("[NetConnector] Start Connect GET : " + info.Url);
 		if(info == null){
-			Debug.LogError("[NetConnection] Error!! Start Connect GET : NetConnectInfo is null.");
+			Debug.LogError("[NetConnector] Error!! Start Connect GET : NetConnectInfo is null.");
 			return;
 		}
 		if(info.Url == null){
-			Debug.LogError("[NetConnection] Error!! Start Connect GET : NetConnectInfo URL is null.");
+			Debug.LogError("[NetConnector] Error!! Start Connect GET : NetConnectInfo URL is null.");
 			return;
 		}
 		this.StopAllCoroutines();
@@ -91,13 +91,13 @@ public class NetConnector : MonoBehaviour, IDisposable
 	/// <param name="form">Http ヘッダー情報</param>
 	public void StartConnectPost(NetConnectInfo info,Dictionary<string, string> headers)
 	{
-		Debug.Log("[NetConnection] Start Connect POST : " + info.Url);
+		Debug.Log("[NetConnector] Start Connect POST : " + info.Url);
 		if(info == null){
-			Debug.LogError("[NetConnection] Error!! Start Connect POST : NetConnectInfo is null.");
+			Debug.LogError("[NetConnector] Error!! Start Connect POST : NetConnectInfo is null.");
 			return;
 		}
 		if(info.Url == null || !info.IsPost){
-			Debug.LogError("[NetConnection] Error!! Start Connect POST : URL is null. Or this connect is not post.");
+			Debug.LogError("[NetConnector] Error!! Start Connect POST : URL is null. Or this connect is not post.");
 			return;
 		}
 		this.StopAllCoroutines();
@@ -132,7 +132,7 @@ public class NetConnector : MonoBehaviour, IDisposable
 	private IEnumerator ProcDownload()
 	{
 		if(!this.IsConnecting){
-			Debug.LogError("[NetConnection] Error!! ProcDownload : Connecting not ready. IsConnecting flag is false.");
+			Debug.LogError("[NetConnector] Error!! ProcDownload : Connecting not ready. IsConnecting flag is false.");
 			yield break;
 		}
 		while( !this.WWW.isDone && this.WWW.error == null ){
@@ -141,7 +141,7 @@ public class NetConnector : MonoBehaviour, IDisposable
 		}
 		this.CancelInvoke("ProcTimeOut");
 		
-		Debug.Log("NetConnection : IsError = " + this.IsError.ToString() + (this.IsError ? "" : ", data size = " + this.WWW.bytes.Length.ToString()));
+		Debug.Log("[NetConnector] ProcDownload : IsError = " + this.IsError.ToString() + (this.IsError ? "" : ", data size = " + this.WWW.bytes.Length.ToString()));
 #if UNITY_EDITOR
 		StringBuilder headerStr = new StringBuilder(">------- RESPONSE HEADER ----------\n");
 		foreach(var pair in this.WWW.responseHeaders){
@@ -189,7 +189,7 @@ public class NetConnector : MonoBehaviour, IDisposable
 	}
 	private void ProcTimeOut()
 	{
-		Debug.Log("[NetConnection]  Time out!! : " + (this.Info != null ? this.Info.Url : ""));
+		Debug.Log("[ProcDownload] Time out!! : " + (this.Info != null ? this.Info.Url : ""));
 		this.IsTimeout = true;
 		this.StopCoroutine("ProcDownload");
 		this.StopConnect();

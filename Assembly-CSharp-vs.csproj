@@ -353,13 +353,19 @@
      <Compile Include="Assets\Framework\Net\NetCommand\ReqestAPI\ReqApiBase.cs" />
      <Compile Include="Assets\Framework\Net\NetCommand\ReqestAPI\ReqApiBaseEx.cs" />
      <Compile Include="Assets\Framework\Net\NetCommand\ReqestAPI\ReqApiLoginPlayer.cs" />
+     <Compile Include="Assets\Framework\Net\NetCommand\ResultObject\RocResultCode.cs" />
      <Compile Include="Assets\Framework\Net\NetConnectManager.cs" />
      <Compile Include="Assets\Framework\Net\NetConnector.cs" />
      <Compile Include="Assets\Framework\Net\NetRequestManager.cs" />
+     <Compile Include="Assets\Framework\Net\NetResponse.cs" />
+     <Compile Include="Assets\Framework\Net\RoList.cs" />
      <Compile Include="Assets\Framework\Net\ServerNameHelper.cs" />
+     <Compile Include="Assets\Framework\Net\ServerResultCode.cs" />
+     <Compile Include="Assets\Framework\Net\ServerResultCodeHelper.cs" />
      <Compile Include="Assets\Framework\System\AppCore.cs" />
      <Compile Include="Assets\Framework\System\Logic\CountingLock.cs" />
      <Compile Include="Assets\Framework\System\Logic\GameObjectEx.cs" />
+     <Compile Include="Assets\Framework\System\Logic\IMsgPack.cs" />
      <Compile Include="Assets\Framework\System\Logic\ListEx.cs" />
      <Compile Include="Assets\Framework\System\ObjectGenerator.cs" />
      <Compile Include="Assets\Framework\System\View\Popup\PopupManager.cs" />
@@ -396,6 +402,9 @@
      <None Include="Assets\3rdPartyPackages\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/UnityExtensions/Unity/GUISystem/4.6.7/Standalone/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zlib.CF">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Framework/DLL/Ionic.Zlib.CF.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

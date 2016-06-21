@@ -1,21 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../RNO/app/Client/project/Assets/Scripts/_Net/_NetCommand/_RequestAPI/Extension/ReqApiBaseEx.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Framework/Net/NetResponse.cs">
     <Files>
-      <File FileName="../../RNO/app/Client/project/Assets/Scripts/Title/LoginController.cs" Line="151" Column="16" />
-      <File FileName="../../RNO/app/Client/project/Assets/NowproNC/Scripts/_Net/MCNetManager.cs" Line="411" Column="10" />
-      <File FileName="../../RNO/app/Client/project/Assets/Scripts/_Net/_NetCommand/_RequestAPI/Extension/ReqApiBaseEx.cs" Line="105" Column="9" />
-      <File FileName="../../RNO/app/Client/project/Assets/Scripts/_Net/NetRequestManager.cs" Line="118" Column="112" />
-      <File FileName="../../RNO/app/Client/project/Assets/NowproNC/Scripts/_Net/MCNetConnection.cs" Line="173" Column="56" />
-      <File FileName="../../RNO/app/Client/project/Assets/Scripts/_System/UI/MCView.cs" Line="36" Column="5" />
-      <File FileName="../../RNO/app/Client/project/Assets/Scripts/_Net/NetResponse.cs" Line="106" Column="45" />
-      <File FileName="../../RNO/app/Client/project/Assets/Scripts/_Net/_NetCommand/_ResultObject/RocResultCode.cs" Line="23" Column="3" />
+      <File FileName="Assets/Framework/Net/NetRequestManager.cs" Line="65" Column="36" />
+      <File FileName="Assets/Framework/Net/NetCommand/ReqestAPI/ReqApiBaseEx.cs" Line="1" Column="1" />
+      <File FileName="Assets/Framework/Net/NetCommand/ReqestAPI/ReqApiBase.cs" Line="1" Column="1" />
+      <File FileName="Assets/Framework/Net/NetConnectManager.cs" Line="115" Column="32" />
+      <File FileName="Assets/Framework/Net/NetResponse.cs" Line="82" Column="3" />
+      <File FileName="Assets/Framework/Net/NetConnector.cs" Line="35" Column="2" />
+      <File FileName="Assets/3rdPartyPackages/MsgPack/BoxingPacker.cs" Line="127" Column="3" />
+      <File FileName="Assets/Framework/Net/RoList.cs" Line="33" Column="3" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True" />
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

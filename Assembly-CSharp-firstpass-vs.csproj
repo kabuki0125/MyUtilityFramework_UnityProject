@@ -71,6 +71,9 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/UnityExtensions/Unity/GUISystem/4.6.7/Standalone/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Ionic.Zlib.CF">
+ <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Framework/DLL/Ionic.Zlib.CF.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

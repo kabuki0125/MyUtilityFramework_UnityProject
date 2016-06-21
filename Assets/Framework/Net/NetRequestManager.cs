@@ -5,6 +5,7 @@ namespace Net
 	using System;
 	using UnityEngine;
 	using System.Collections;
+	using System.Collections.Generic;
 
 	/// <summary>
 	/// 通信コマンド　ゲームサーバへの通信要求管理.
@@ -51,28 +52,45 @@ namespace Net
 			                                                    	   serverURL + api.URN,
 			                                                    	   System.Text.Encoding.UTF8.GetBytes(api.ToPostDataWithHash()),
 			                                                    	   DownloadDataType.NetCommand.ToString());
-			co.DidLoadDelegate = delegate(NetConnector obj) {};	// TODO : レスポンス周りの機能を実装したらちゃんと実装.
+			co.DidLoadDelegate = ConnectFinished(info);
 		}
 
-		private static readonly string NET_TAG = "NetRequestManager";	// TODO : 本実装時はサーバー担当者とすり合わせる.
-	}
-
-	/// <summary>
-	/// リクエスト情報
-	/// </summary>
-	class NetRequestInfo
-	{
-		public ReqApiBase       Request          { get ; private set ; }
-		/// <summary>リクエストされた順番</summary>
-		public int              OrderID          { get ; private set ; }
-		/// <summary>ローディング中表示をするか？</summary>
-		public bool             IsDisplayLoading { get ; private set ; }
-		
-		public NetRequestInfo(ReqApiBase req, int order, bool bDisplayLoading)
+		// 通信終了時処理
+		private Action<NetConnector> ConnectFinished(NetRequestInfo info)
 		{
-			Request = req ;
-			OrderID = order ;
-			IsDisplayLoading = bDisplayLoading ;
+            return delegate(NetConnector con) {
+				m_requestQueue.RemoveAll(i => i.OrderID == info.OrderID);
+				// TODO : View側のローティング演出やボタンロックなどがあればこのタイミングで解除しとくのが無難？
+
+				var response = NetResponse.Create(info.Request.Command, con);
+				if( response.IsConnectError ){
+					// TODO : 通信エラー処理.
+					return;
+				}
+				// TODO : 通信成功処理.キャッシュ更新など実装.
+            };
+        }
+
+		private List<NetRequestInfo> m_requestQueue = new List<NetRequestInfo>();
+		private static readonly string NET_TAG = "NetRequestManager";	// TODO : 本実装時はサーバー担当者とすり合わせる.
+
+		/// <summary>
+		/// 内部クラス：リクエスト情報
+		/// </summary>
+		class NetRequestInfo
+		{
+			public ReqApiBase       Request          { get ; private set ; }
+			/// <summary>リクエストされた順番</summary>
+			public int              OrderID          { get ; private set ; }
+			/// <summary>ローディング中表示をするか？</summary>
+			public bool             IsDisplayLoading { get ; private set ; }
+			
+			public NetRequestInfo(ReqApiBase req, int order, bool bDisplayLoading)
+            {
+                Request = req ;
+                OrderID = order ;
+                IsDisplayLoading = bDisplayLoading ;
+			}
 		}
 	}
 
