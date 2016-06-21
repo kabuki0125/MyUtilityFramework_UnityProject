@@ -1,15 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Framework/Net/NetResponse.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SampleProject/Scripts/Common/UICameraEx.cs">
     <Files>
-      <File FileName="Assets/Framework/Net/NetRequestManager.cs" Line="65" Column="36" />
-      <File FileName="Assets/Framework/Net/NetCommand/ReqestAPI/ReqApiBaseEx.cs" Line="1" Column="1" />
-      <File FileName="Assets/Framework/Net/NetCommand/ReqestAPI/ReqApiBase.cs" Line="1" Column="1" />
-      <File FileName="Assets/Framework/Net/NetConnectManager.cs" Line="115" Column="32" />
-      <File FileName="Assets/Framework/Net/NetResponse.cs" Line="82" Column="3" />
-      <File FileName="Assets/Framework/Net/NetConnector.cs" Line="35" Column="2" />
-      <File FileName="Assets/3rdPartyPackages/MsgPack/BoxingPacker.cs" Line="127" Column="3" />
-      <File FileName="Assets/Framework/Net/RoList.cs" Line="33" Column="3" />
+      <File FileName="Assets/SampleProject/Scripts/Common/UICameraEx.cs" Line="12" Column="66" />
+      <File FileName="Assets/SampleProject/Scripts/Common/Logic/LockInputManager.cs" Line="93" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

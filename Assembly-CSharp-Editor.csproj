@@ -142,16 +142,18 @@
  <Reference Include="NPOI.OpenXmlFormats">
  <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Editor/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
  <Reference Include="Ionic.Zlib.CF">
  <HintPath>/Users/PCD-00154/Develop/Git/MyUtilityFramework_UnityProject/Assets/Framework/DLL/Ionic.Zlib.CF.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity_4.6.7/Unity4.6.7.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{0C3E57E3-B9EC-D5DF-B6EA-9946E4079882}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{CCFDE254-CD0E-0662-56CF-0AC08D7B0589}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

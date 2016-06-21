@@ -760,6 +760,8 @@ public partial class UICamera : MonoBehaviour
 
 		// If no event receiver mask was specified, use the camera's mask
 		if (eventReceiverMask == -1) eventReceiverMask = cachedCamera.cullingMask;
+
+		UICamera.DidCreateInstanceEvent(this);
 	}
 
 	/// <summary>
