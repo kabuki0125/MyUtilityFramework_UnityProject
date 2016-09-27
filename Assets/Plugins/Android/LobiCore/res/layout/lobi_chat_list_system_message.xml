@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/lobi_chat_list_item_read_mark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/lobi_chat_list_read_mark"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp" >
+
+        <LinearLayout
+            android:layout_width="@dimen/lobi_chat_system_message_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lobi_base_list"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp" >
+
+            <TextView
+                android:id="@+id/lobi_chat_list_system_message_time"
+                style="@style/lobi_textview_black_very_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="12/07/30 11:30" />
+
+            <com.kayac.lobi.libnakamap.components.CustomTextView
+                android:id="@+id/lobi_chat_list_system_message_message"
+                style="@style/lobi_textview_black_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:autoLink="all"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/lobi_padding_high"
+                android:paddingRight="@dimen/lobi_padding_high" />
+
+            <LinearLayout
+                android:id="@+id/lobi_chat_list_system_message_creted_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/lobi_padding_high"
+                android:paddingRight="@dimen/lobi_padding_high"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/lobi_chat_list_system_message_invitation_button"
+                    style="@style/lobi_white_button_l_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/lobi_margin_middle"
+                    android:text="@string/lobi_add_friend" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

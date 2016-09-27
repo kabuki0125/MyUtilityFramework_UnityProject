@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+    <scale
+        android:duration="@integer/lobi_menu_popup_fade_in_duration"
+        android:fromXScale="95%"
+        android:fromYScale="95%"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="100%"
+        android:toYScale="100%" />
+    -->
+
+ 	
+    <alpha
+        android:duration="@integer/lobi_menu_popup_fade_in_duration"
+        android:fromAlpha="0.8"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:toAlpha="1.0" />
+
+</set>

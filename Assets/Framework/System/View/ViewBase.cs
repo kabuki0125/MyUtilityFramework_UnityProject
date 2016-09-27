@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Viewベースクラス
 /// </summary>
-public abstract class ViewBase : MonoBehaviour, IDisposable
+public class ViewBase : MonoBehaviour, IDisposable
 {
 
 	/// <summary>
@@ -15,25 +16,12 @@ public abstract class ViewBase : MonoBehaviour, IDisposable
 	public bool IsEnableButton
 	{
 		set {
-			foreach(var b in this.GetComponentsInChildren<UIButton>(true)){
+			foreach(var b in this.GetComponentsInChildren<Button>(true)){
+                if(!b.interactable){
+                    continue;   // interactable値は演出上の見かけのトリガーとして使われることもあるのでここでは設定しない.そもそも設定されているものに関しては無視する.
+                }
 				b.enabled = value;
 			}
-			foreach(var b in this.GetComponentsInChildren<UIImageButton>(true)){
-				b.enabled = value;
-			}
-		}
-	}
-
-	/// <summary>
-	/// プロパティ：表示有効設定
-	/// </summary>
-	public bool IsVisible
-	{
-		set {
-			foreach(var p in this.GetComponentsInChildren<UIPanel>(true)){
-				p.enabled = value;
-			}
-			this.IsEnableButton = value;
 		}
 	}
 
@@ -48,8 +36,9 @@ public abstract class ViewBase : MonoBehaviour, IDisposable
 	/// </summary>
 	public virtual void Dispose()
 	{
-		Debug.Log(this.name + ": call dispose.");
-		GameObject.Destroy(this.gameObject);
+        if(!this.IsDestroyed){
+		    GameObject.Destroy(this.gameObject);
+        }
 	}
 	private void OnDestroy()
 	{
@@ -57,12 +46,12 @@ public abstract class ViewBase : MonoBehaviour, IDisposable
 	}
 
 	/// <summary>
-	/// ボタンを押した時の処理設定. ※NGUI ver3未満対応
+	/// ボタンを押した時の処理設定. ※for UGUI
 	/// </summary>
-	public void SetButtonMsg(string btnName, string funcName)
+	public void SetButtonMsg(string btnName, UnityEngine.Events.UnityAction func)
 	{
-		this.GetScript<UIButtonMessage>(btnName).target = this.gameObject;
-		this.GetScript<UIButtonMessage>(btnName).functionName = funcName;
+		var btn = this.GetScript<Button>(btnName);
+        btn.onClick.AddListener(func);
 	}
 
 	/// <summary>

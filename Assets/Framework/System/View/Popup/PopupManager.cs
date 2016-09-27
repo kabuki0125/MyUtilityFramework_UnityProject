@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using MyLibrary.Unity;
 
 /// <summary>
 /// ポップアップ生成クラス.
@@ -27,25 +28,20 @@ public class PopupManager : MonoBehaviour
 		delegate(){
 		});
 	*/
-	[SerializeField]
-	private ObjectGenerator generator;
 
+    [SerializeField]
+    private GameObject[] prefabs;
+    
 	/// <summary>
 	/// 共通インスタンス
 	/// </summary>
 	public static PopupManager SharedInstance { get; private set; }
+    
 
-	public T Create<T>(string name) where T : Component
+	public T Create<T>(string name) where T : MonoBehaviour
 	{
-		if( generator == null ){
-			return null;
-		}
-
-		GameObject obj = generator.InstantiatePrefab(this.gameObject, "Popup/"+name);
-		if( obj.GetComponent<T>() == null ){
-			obj.AddComponent<T>();
-		}
-		return obj.GetComponent<T>();
+		GameObject obj = this.InstantiatePrefab(this.gameObject, name);
+        return obj.GetOrAddComponent<T>();
 	}
 
 	void Awake()
@@ -54,4 +50,31 @@ public class PopupManager : MonoBehaviour
 			SharedInstance = this;
 		}
 	}
+    
+#region internal proc.
+    
+    // 名前からプレハブをインスタンス化
+    public GameObject InstantiatePrefab(GameObject parent, string name)
+    {
+        var prefab = this.GetPrefab(name) as GameObject;
+        var obj = GameObject.Instantiate(prefab) as GameObject;
+        if(parent != null){
+            parent.AddInChild(obj);
+        }
+        return obj;
+    }
+    // リストからプレハブを取得する
+    private UnityEngine.Object GetPrefab(string name)
+    {
+        foreach(var i in prefabs){
+            if( i.name != name ){
+                continue;
+            }
+            return i;
+        }
+        Debug.LogError("GetPrefab Error:"+name);
+        return null;
+    }
+    
+#endregion
 }

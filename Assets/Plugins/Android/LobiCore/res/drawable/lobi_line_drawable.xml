@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/lobi_main_background" />
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/lobi_padding_low"
+        android:left="@dimen/lobi_padding_middle"
+        android:right="@dimen/lobi_padding_middle"
+        android:top="@dimen/lobi_padding_low">
+        <shape>
+            <padding
+                android:left="@dimen/lobi_padding_middle"
+                android:right="@dimen/lobi_padding_middle" />
+
+            <solid android:color="@color/lobi_pearl_gray" />
+        </shape>
+    </item>
+
+</layer-list>

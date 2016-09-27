@@ -1,0 +1,161 @@
+"KLC_MENU_SECTION_TITLE_MENU" = "MENU";
+"KLC_MENU_SECTION_TITLE_GAME_MENU" = "GAME MENU";
+"KLC_CANCEL" = "Cancel";
+
+"KLC_MENU_REC" = "Videos";
+"KLC_MENU_RANKING" = "Ranking";
+"KLC_MENU_CHAT" = "Chat";
+"KLC_MENU_FRIENDS" = "Following";
+"KLC_MENU_INVITE" = "Invite";
+"KLC_MENU_BIND" = "Connect to Lobi";
+"KLC_MENU_CONNECTAPP" = "Login to Lobi";
+"KLC_MENU_SECTION_TITLE_CONTENT" = "Discover";
+"KLC_MENU_SECTION_TITLE_USER" = "Menu";
+"KLC_MENU_FOLLOW_LIST" = "Following";
+"KLC_MENU_FOLLOWER_LIST" = "Followers";
+"KLC_MENU_NOT_LOGIN" = "Login Lobi to customize here";
+"KLC_PROFILE_TITLE_NORMAL" = "Profile";
+"KLC_PROFILE_MENU_TITLE_ACCUSE" = "Accuse";
+"KLC_PROFILE_MENU_TITLE_KICK" = "Kick";
+"KLC_PROFILE_MENU_TITLE_BLOCK" = "Block";
+"KLC_PROFILE_BUTTON_REMOVE" = "Friend";
+"KLC_PROFILE_BUTTON_ADD" = "Add";
+"KLC_PROFILE_BUTTON_CHAT" = "Chat";
+"KLC_PROFILE_CONTACTS" = "Lobi friends %@";
+"KLC_PROFILE_%@_VIDEOS" = "%@ videos";
+"KLC_PROFILE_DESCRIPTION_EDIT_TEXT" = "Profile";
+"KLC_PROFILE_DEFAULT_USER_HEADER" = "Lobi's Profile";
+"KLC_PROFILE_NOT_CONNECT_LOBI" = "Not Connected to Lobi";
+"KLC_PROFILE_EDIT" = "Edit profile";
+"KLC_FRIEND_LIST" = "Friends";
+"KLC_FRIEND_ADD" = "Add friends";
+"KLC_LOBI_FRIEND_ADD" = "Add Lobi friends";
+"KLC_SORT_NAME" = "Name";
+"KLC_SORT_NEW" = "New";
+"KLC_FRIEND_SEARCH" = "Search";
+"KLC_SEARCH_APP_FRIENDS" = "Search friends";
+
+"KLC_PROFILE_ALERT_TITLE_ADD_FRIEND" = "Add a contact?";
+"KLC_ADD_FRIEND_SUCCESS" = "Added to Contacts!";
+"KLC_PROFILE_ALERT_TITLE_CREATE_1ON1" = "Create a group?";
+"KLC_PROFILE_ALERT_TITLE_REMOVE_CONTACT" = "Are you sure to remove this user from your friends list?";
+"KLC_ACCUSE_ALERT" = "Why do you report?";
+"KLC_PROFILE_ACCUSE_SUCCESS" = "Sent report";
+"KLC_BLOCK_ALERT_TITLE" = "User blocking";
+"KLC_BLOCK_ALERT_MESSAGE" = "Are you sure you want to block this user? \nOnce blocked, you and this user will be kicked from each other's contact list. Also This user will be kicked from the group which you are group leader. And You will be kicked from the group which this user is group leader. But you and this user will NOT be kicked from the group which the other user is group leader. \n\nYou can change this later.";
+"KLC_BLOCK_RESPONSE_SUCCESS" = "Blocked";
+"KLC_BLOCK_USER_LIST" = "Blocking users";
+"KLC_BLOCK_USER_LIST_FAILED" = "Failed loading blocking users";
+"KLC_BLOCK_UNLOCK" = "Unblock";
+"KLC_BLOCK_NOT_FOUND" = "None found";
+
+"KLC_OK" = "OK";
+"KLC_ERROR_UNKOWN" = "Unknown Error";
+"KLC_ERROR_401" = "401 token is not valid...";
+"KLC_ERROR_404_NOT_FOUND" = "Couldn't connect to server, check your internet connection and try again";
+"KLC_ERROR_500_OOPS" = "Connection Error";
+"KLC_ERROR_504_TIMEOUT" = "Connection timeout, check your internet connection and try again";
+"KLC_ERROR_502_MAINTENANCE" = "We're under maintenance, please wait";
+
+"KLC_ACKNOWLEDGEMENT_FILE" = "acknowledgement_en";
+"KLC_BIND_NAKAMAP_APP" = "Login to Lobi";
+"KLC_BLOCK_USER_LIST" = "Blocking users";
+"KLC_CANCEL" = "Cancel";
+"KLC_FONT_SIZE_LARGE" = "Large";
+"KLC_FONT_SIZE_MIDDLE" = "Middle";
+"KLC_FONT_SIZE_SMALL" = "Small";
+"KLC_MAIL_DEAR_TEAM_%@_%@_%@_%@" = "Dear Lobi team,\n\n\n---\nLobiCoreSDK: version %@, platform: %@, os: %@, u: %@";
+"KLC_MENU_SETTINGS" = "Settings";
+"KLC_SERVER_TITLE" = "Server";
+"KLC_SETTINGS_ACCOUNT" = "Account";
+"KLC_SETTINGS_ACT_ON_SCT" = "Act on Specified Commercial Transactions";
+"KLC_SETTINGS_CELL_CHAT_ALPHA" = "Ballon transparency";
+"KLC_SETTINGS_CELL_TUTORIAL" = "What's Lobi?";
+"KLC_SETTINGS_FAQ_CHAT" = "FAQ for LobiChat";
+"KLC_SETTINGS_FAQ_REC" = " FAQ for LobiPlay";
+"KLC_SETTINGS_FEEDBACK" = "Feedback";
+"KLC_SETTINGS_FONT_SIZE" = "Font size";
+"KLC_SETTINGS_SECTION_TITLE_BLOCK" = "Block";
+"KLC_SETTINGS_SECTION_TITLE_CHAT" = "Chat";
+"KLC_SETTINGS_SECTION_TITLE_ETC" = "Others";
+"KLC_SETTINGS_SECTION_TITLE_HELP" = "Help";
+"KLC_SETTINGS_SPECIAL_THANKS" = "Acknowledgements";
+"KLC_SETTINGS_TERMS_OF_USE" = "Terms of Use";
+"KLC_SETTINGS_VERSION" = "Version";
+"KLC_SETTINGS_WHATS_NEW" = "What's new";
+"KLC_TWITTER_FOLLOW_US" = "Follow us on Twitter";
+
+"KLC_USER_SETTINGS_TITLE" = "Edit profile";
+"KLC_USER_SETTINGS_SECTION_COVER" = "Change a cover";
+"KLC_USER_SETTINGS_SECTION_ICON" = "Profile picture";
+"KLC_USER_SETTINGS_SECTION_NAME" = "User name";
+"KLC_USER_SETTINGS_SECTION_DESCRIPTION" = "Your info";
+"KLC_USER_SETTINGS_CELL_COVER" = "Cover";
+"KLC_USER_SETTINGS_CELL_ICON" = "Profile picture";
+"KLC_USER_DESCRIPTION_PLACEHOLDER" = "Your info";
+"KLC_USER_SETTINGS_FAILED_MESSAGE" = "Failed to change \nprofile";
+"KLC_USER_SETTINGS_FAILED_TITLE" = "Undo changes?";
+"KLC_USER_SETTINGS_DESTROY" = "Undo";
+"KLC_USER_SETTINGS_DISCARD_CHANGE" = "Are you sure discard change?";
+"KLC_PUBLIC_GROUP" = "Public groups";
+
+"KLC_ALERT_NO" = "No";
+"KLC_ALERT_YES" = "Yes";
+
+"KLC_PHOTO_FROM_LIBRARY" = "Choose from library";
+"KLC_PHOTO_FROM_CAMERA" = "Take a photo";
+"KLC_SAVE" = "Save";
+
+"KLC_NOTICE_TITLE" = "Notification";
+
+"KLC_DATE_NOW" = "now";
+"KLC_DATE_MONTHS_%d" = "%d months ago";
+"KLC_DATE_MINS_%d" = "%d minutes ago";
+"KLC_DATE_YEARS_%d_MONTHS_%d" = "%d years %d months ago";
+"KLC_DATE_YEARS_%d" = "%d years ago";
+"KLC_DATE_DAYS_%d" = "%d days ago";
+"KLC_DATE_HOURS_%d" = "%d hours ago";
+"KLC_DATE_SECS_%d" = "%d seconds ago";
+
+"KLC_LOGIN_DONE" = "Open Lobi profile";
+"KLC_LOBI_ACCOUNT" = "Open Lobi profile";
+"KLC_NOT_LOGIN" = "Receive notification!";
+"KLC_LOBI_NAME_%@" = "Lobi:%@";
+
+"KLC_FOLLOW" = "Follow";
+"KLC_FOLLOWING" = "Following";
+"KLC_FOLLOW_LIST" = "Follow";
+"KLC_FOLLOWER_LIST" = "Followers";
+"KLC_LETS_LOGIN_LOBI" = "Let's login Lobi!";
+"KLC_LOGIN" = "Login";
+
+"KLC_DEFAULT_LOGIN_ENTRANCE_TITLE" = "Welcome Lobi";
+"KLC_DEFAULT_LOGIN_ENTRANCE_MESSAGE" = "Lets login Lobi";
+"KLC_DEFAULT_LOGIN_ENTRANCE_CANCEL" = "Later";
+"KLC_DEFAULT_LOGIN_ENTRANCE_OK" = "OK";
+
+"KLC_GAME_NAME_LABEL" = "Game:%@";
+"KLC_FOLLOW_LIST_SECTION_INGAME" = "Lobi user in game(%d)";
+"KLC_POPUP_LOGIN_SUBTEXT" = "Receive notification!";
+"KLC_POPUP_APP_LAUNCH_MAINTEXT" = "See activities!";
+"KLC_POPUP_APP_LAUNCH_SUBTEXT" = "The latest news about followers";
+"KLC_LAUNCH_LOBI_APP" = "Launch";
+
+"KLC_DEFAULT_PROMOTE_NOTICE_OPEN" = "Players are waiting to hear your thoughts about the videos.";
+"KLC_DEFAULT_PROMOTE_NOTICE_UPLOAD" = "Find more followers using Lobi!";
+
+"KLC_LIST_ZERO_COM_ERROR" = "Failed to load list";
+"KLC_PROFILE_FOLLOW_LIST_ZERO" = "No follow\'s in your list yet";
+"KLC_PROFILE_FOLLOWER_LIST_ZERO" = "No follower in your list yet";
+"KLC_PROFILE_PUBLIC_USER_LIST_ZERO" = "No information to show";
+
+"KLC_NOTICE_ZERO" = "Find chats, followers and all your other notifications here.";
+
+"KLC_PROFILE_MY_FOLLOW_LIST_ZERO" = "You haven't followed anyone in this game.\nSee popular videos!!";
+"KLC_PROFILE_MY_FOLLOWER_LIST_ZERO" = "You haven't been followed in this game.\nSee popular videos!!b";
+
+"KLC_NAVIGATION_TITLE_ACCEPT_TERMS" = "Accept Terms";
+"KLC_BUTTON_TITLE_ACCEPT_TERMS" = "Accept";
+
+"KLC_LIKE_BUTTON" = "Goo";
+"KLC_DONE" = "Done";

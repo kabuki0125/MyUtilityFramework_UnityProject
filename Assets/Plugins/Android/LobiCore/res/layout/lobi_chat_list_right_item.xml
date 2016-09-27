@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/lobi_chat_list_item_read_mark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/lobi_chat_list_read_mark"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/lobi_chat_icon_margin" >
+
+                <FrameLayout
+                    android:id="@+id/lobi_chat_list_item_message_balloon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/lobi_balloon_right" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/lobi_padding_low"
+                            android:paddingLeft="@dimen/lobi_padding_chat_regular" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingTop="8dp" >
+
+                                        <TextView
+                                            android:id="@+id/lobi_chat_list_item_user_name"
+                                            style="@style/lobi_textview_gray_small_singleline"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:layout_weight="1"
+                                            android:text="USER_NAME" />
+
+                                        <TextView
+                                            android:id="@+id/lobi_chat_list_item_time"
+                                            style="@style/lobi_textview_gray_small"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|top"
+                                            android:layout_marginLeft="@dimen/lobi_margin_middle"
+                                            android:text="few minutes ago" />
+
+                                        <ImageView
+                                            android:id="@+id/lobi_chat_list_stamp_shout_ico"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/lobi_margin_middle"
+                                            android:src="@drawable/lobi_icn_chat_shout"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/lobi_chat_list_more"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:src="@drawable/lobi_btn_chat_more" />
+                            </LinearLayout>
+
+                            <com.kayac.lobi.libnakamap.components.CustomTextView
+                                android:id="@+id/lobi_chat_list_item_message"
+                                style="@style/lobi_textview_black_default"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/lobi_padding_chat_regular"
+                                android:autoLink="all" />
+
+                            <FrameLayout
+                                android:id="@+id/lobi_chat_list_item_picture_container"
+                                android:layout_width="@dimen/lobi_chat_picture_image_width"
+                                android:layout_height="@dimen/lobi_chat_picture_image_height"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginRight="@dimen/lobi_padding_chat_regular"
+                                android:layout_marginTop="@dimen/lobi_padding_chat_regular"
+                                android:visibility="gone" >
+
+                                <com.kayac.lobi.libnakamap.components.ImageLoaderView
+                                    android:id="@+id/lobi_chat_list_item_picture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:scaleType="centerInside"
+                                    lobi:lobi_baseHeight="@dimen/lobi_chat_gallery_thumb_height"
+                                    lobi:lobi_baseWidth="@dimen/lobi_chat_gallery_thumb_width"
+                                    lobi:lobi_useMemoryCache="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lobi_chat_list_item_picture_description"
+                                    android:layout_width="@dimen/lobi_chat_gallery_thumb_width"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center|bottom"
+                                    android:layout_marginBottom="17dp"
+                                    android:background="@color/lobi_chat_list_assets_information_frame"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone" >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:paddingLeft="@dimen/lobi_padding_low"
+                                        android:src="@drawable/lobi_chat_icn_camera" />
+
+                                    <TextView
+                                        android:id="@+id/lobi_chat_list_item_picture_count"
+                                        style="@style/lobi_textview_white_default"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:paddingLeft="@dimen/lobi_padding_low"
+                                        android:text="20"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lobi_chat_list_item_refers_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical"
+                                android:visibility="gone" >
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lobi_chat_list_item_replies_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <FrameLayout
+                                android:id="@+id/lobi_chat_list_item_replies_reply_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <include layout="@layout/lobi_chat_reply_layout_left" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/lobi_chat_list_item_replies_reply_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <include layout="@layout/lobi_chat_reply_layout_left" />
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <include layout="@layout/lobi_chat_list_bottom_options" />
+                    </LinearLayout>
+                </FrameLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
+            android:id="@+id/lobi_chat_list_item_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+    </LinearLayout>
+
+</LinearLayout>

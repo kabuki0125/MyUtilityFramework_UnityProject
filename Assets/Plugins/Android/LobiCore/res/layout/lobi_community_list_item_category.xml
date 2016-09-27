@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lobi_white"
+    android:orientation="vertical" >
+
+    <com.kayac.lobi.libnakamap.components.ListRow
+        android:id="@+id/lobi_community_title_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_two_line"
+        lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
+        lobi:lobi_leftContentLayoutId="@layout/lobi_list_row_content_framed_icon_menu"
+        lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+
+    <com.kayac.lobi.libnakamap.components.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

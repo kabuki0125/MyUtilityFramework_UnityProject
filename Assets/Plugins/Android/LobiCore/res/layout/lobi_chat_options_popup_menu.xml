@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/lobi_padding_middle" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lobi_bg_overflow_menu" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/lobi_chat_options_popup_report_cancel_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lobi_chat_more_options_menu_background_selector"
+                android:paddingBottom="@dimen/lobi_margin_section"
+                android:paddingLeft="@dimen/lobi_margin_section"
+                android:paddingRight="@dimen/lobi_margin_section"
+                android:paddingTop="@dimen/lobi_margin_section" >
+
+                <TextView
+                    android:id="@+id/lobi_chat_options_popup_report_cancel_text"
+                    style="@style/lobi_textview_black_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/lobi_chat_options_popup_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/lobi_line_gray_horizontal_repeat" />
+
+            <FrameLayout
+                android:id="@+id/lobi_chat_options_popup_like_dislike_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lobi_chat_more_options_menu_background_selector"
+                android:paddingBottom="@dimen/lobi_margin_section"
+                android:paddingLeft="@dimen/lobi_margin_section"
+                android:paddingRight="@dimen/lobi_margin_section"
+                android:paddingTop="@dimen/lobi_margin_section" >
+
+                <TextView
+                    android:id="@+id/lobi_chat_options_popup_like_dislike_text"
+                    style="@style/lobi_textview_black_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lobi_to_poke_list" />
+            </FrameLayout>
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@color/lobi_sub_account_popup_divider"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

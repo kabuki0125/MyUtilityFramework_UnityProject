@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="51dp"
+    android:layout_height="48dp" >
+
+    <ImageButton
+        android:id="@+id/lobi_action_bar_button_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/lobi_action_bar_new_text"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4.5dp"
+        android:layout_marginLeft="5.5dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/lobi_black"
+        android:textSize="@dimen/lobi_text_small"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/lobi_action_bar_separator_helper"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/lobi_divider_actionbar" />
+    </FrameLayout>
+
+</FrameLayout>

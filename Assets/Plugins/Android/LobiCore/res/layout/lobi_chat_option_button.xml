@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <ImageView
+        android:id="@+id/lobi_chat_option_buttion_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/lobi_icn_chat_good" />
+    
+    <TextView
+        android:id="@+id/lobi_chat_option_buttion_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lobi_padding_low"
+        style="@style/lobi_textview_gray_small_singleline" 
+        android:layout_gravity="left|center_vertical" />
+    
+</merge>

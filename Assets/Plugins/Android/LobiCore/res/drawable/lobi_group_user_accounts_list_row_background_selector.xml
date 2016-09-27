@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- pressed -->
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true"
+        >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/lobi_group_user_account_row_background_on" />
+        </shape>
+    </item>
+	<!-- default -->        
+    <item android:drawable="@color/lobi_sub_account_popup_background"></item>
+
+</selector>

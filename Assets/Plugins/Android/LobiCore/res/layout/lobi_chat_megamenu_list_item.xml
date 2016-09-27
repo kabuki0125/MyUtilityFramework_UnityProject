@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/lobi_chat_megamenu_button_height"
+    android:minHeight="@dimen/lobi_chat_megamenu_button_height"
+    android:paddingTop="@dimen/lobi_chat_megamenu_padding_top"
+    android:orientation="vertical" 
+    android:background="@drawable/lobi_chat_megamenu_selector">
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true" >
+        
+        <ImageView
+            android:id="@+id/lobi_chat_megamenu_image"
+            android:layout_width="@dimen/lobi_chat_megamenu_icon_size"
+            android:layout_height="@dimen/lobi_chat_megamenu_icon_size"
+            android:layout_gravity="top|center_horizontal"
+            android:scaleType="fitCenter"
+            android:duplicateParentState="false" />
+        
+        <!-- 無効状態の時にアイコンを透過する為に使用 -->
+        <View
+            android:layout_width="@dimen/lobi_chat_megamenu_icon_size"
+            android:layout_height="@dimen/lobi_chat_megamenu_icon_size"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/lobi_chat_megamenu_disable_image_selector"
+            android:duplicateParentState="true"/>
+    </FrameLayout>
+    
+    <TextView
+        android:id="@+id/lobi_chat_megamenu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:lines="2"
+        android:gravity="center"
+        android:textColor="@drawable/lobi_chat_megamenu_title_selector"
+        android:duplicateParentState="true" />
+
+</LinearLayout>

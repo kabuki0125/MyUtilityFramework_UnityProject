@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.IO;
 using System.Collections;
@@ -11,10 +12,12 @@ public class PopupOK : ViewBase
 {
 	public void Init(string msg, Action didTapOk)
 	{
+        this.GetComponent<Canvas>().worldCamera = CameraHelper.SharedInstance.UICamera;
+        
 		m_didTapOk	= didTapOk;
 
-		this.GetScript<UILabel>("Lab_popup").text	= msg;
-		this.SetButtonMsg("btn_close", "DidTapOk");
+		this.GetScript<Text>("Lab_popup").text	= msg;
+		this.SetButtonMsg("btn_close", DidTapOk);
 	}
 	
 	void PopupClose()

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lobi_custom_large_button_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:duplicateParentState="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/lobi_custom_large_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/lobi_text_very_large" />
+
+    <ImageView
+        android:id="@+id/lobi_custom_large_button_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        android:paddingLeft="@dimen/lobi_padding_high" />
+
+</FrameLayout>

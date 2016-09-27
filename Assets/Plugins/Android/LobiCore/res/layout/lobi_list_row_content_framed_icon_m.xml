@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    lobi:lobi_frameResourceId="@drawable/lobi_frame_m"
+    lobi:lobi_frameWidth="@dimen/lobi_icon_medium"
+    lobi:lobi_frameHeight="@dimen/lobi_icon_medium"
+    android:layout_width="@dimen/lobi_icon_medium"
+    android:layout_height="@dimen/lobi_icon_medium"
+    />

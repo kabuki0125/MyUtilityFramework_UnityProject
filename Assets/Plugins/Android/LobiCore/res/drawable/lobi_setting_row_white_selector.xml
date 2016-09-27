@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- spec/image/widget/widget_chat_guide.jpg -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true" android:state_pressed="true"><shape android:shape="rectangle">
+            <solid android:color="@color/lobi_gray_light" />
+        </shape></item>
+    <!-- デフォルト -->
+    <item android:drawable="@color/lobi_white_true"></item>
+
+</selector>

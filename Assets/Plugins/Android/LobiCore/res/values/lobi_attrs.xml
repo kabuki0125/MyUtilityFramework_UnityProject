@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <declare-styleable name="lobi_ActionBar">
+    <attr name="lobi_content_type">
+      <enum name="lobi_backable" value="1" />
+      <enum name="lobi_close" value="4" />
+      <enum name="lobi_manual" value="0" />
+      <enum name="lobi_menu" value="5" />
+      <enum name="lobi_select_account" value="2" />
+      <enum name="lobi_title_only" value="3" />
+    </attr>
+    <attr name="lobi_text" format="string" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ChatOptionButton">
+    <attr name="lobi_default_drawable" format="reference" />
+    <attr name="lobi_default_text" format="string" />
+    <attr name="lobi_highlight_drawable" format="reference" />
+    <attr name="lobi_textAlign" format="string" />
+  </declare-styleable>
+  <declare-styleable name="lobi_CustomEditText">
+    <attr name="lobi_hint" format="string|reference" />
+    <attr name="lobi_layoutId" format="reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_CustomLargeButton">
+    <attr name="lobi_custom_large_button_background" format="reference" />
+    <attr name="lobi_custom_large_button_dp_size" format="reference" />
+    <attr name="lobi_custom_large_button_image" format="reference" />
+    <attr name="lobi_custom_large_button_text" format="string|reference" />
+    <attr name="lobi_custom_large_button_text_color" format="color|reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_FixedTab">
+    <attr name="lobi_icons" format="reference" />
+    <attr name="lobi_titles" format="reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_FramedImageLoader">
+    <attr name="lobi_frameHeight" format="dimension|reference" />
+    <attr name="lobi_frameResourceId" format="reference" />
+    <attr name="lobi_frameWidth" format="dimension|reference" />
+    <attr name="lobi_loaderId" format="reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_GroupWrapper">
+    <attr name="lobi_group_wrapper_animated" format="boolean" />
+    <attr name="lobi_group_wrapper_content_layout" format="reference" />
+    <attr name="lobi_group_wrapper_elements_to_display" format="integer" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ImageLoaderView">
+    <attr name="lobi_baseDrawable" format="reference" />
+    <attr name="lobi_baseHeight" format="dimension|reference" />
+    <attr name="lobi_baseWidth" format="dimension|reference" />
+    <attr name="lobi_bitmapConfig">
+      <enum name="lobi_argb_8888" value="0" />
+      <enum name="lobi_rgb_565" value="1" />
+    </attr>
+    <attr name="lobi_useMaxExtendedSize" format="boolean" />
+    <attr name="lobi_useMemoryCache" format="boolean" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ImageLoaderCircleView">
+    <attr name="lobi_borderWidth" format="dimension|reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ListRow">
+    <attr name="lobi_centerContentLayoutId" format="reference" />
+    <attr name="lobi_centerContentVisible" format="boolean" />
+    <attr name="lobi_contentBackground" format="reference" />
+    <attr name="lobi_indexBackground" format="reference" />
+    <attr name="lobi_indexVisible" format="boolean" />
+    <attr name="lobi_leftContentLayoutId" format="reference" />
+    <attr name="lobi_leftContentVisible" format="boolean" />
+    <attr name="lobi_rightContentLayoutId" format="reference" />
+    <attr name="lobi_rightContentVisible" format="boolean" />
+    <attr name="lobi_wrapContent" format="boolean" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ListRow_TwoLine">
+    <attr name="lobi_two_line_layout" format="reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ProfileCover">
+    <attr name="lobi_coverImageMaxHeight" format="dimension|reference" />
+    <attr name="lobi_coverImageMinHeight" format="dimension|reference" />
+    <attr name="lobi_iconTopRunOver" format="dimension|reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_SearchBox">
+    <attr name="lobi_closeButton" format="boolean" />
+    <attr name="lobi_frameColor">
+      <enum name="lobi_black" value="0" />
+      <enum name="lobi_gray" value="1" />
+    </attr>
+    <attr name="lobi_searchHintText" format="string|reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_SectionView">
+    <attr name="lobi_section_option_button" format="boolean" />
+    <attr name="lobi_section_option_button_image" format="reference" />
+    <attr name="lobi_section_option_text" format="reference" />
+    <attr name="lobi_section_title" format="reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_ToggleOnOffButton">
+    <attr name="lobi_blockedState" format="boolean" />
+    <attr name="lobi_isOff" format="boolean" />
+  </declare-styleable>
+  <declare-styleable name="lobi_RoundCornerOverlayView">
+    <attr name="lobi_color" format="color|reference" />
+    <attr name="lobi_radius" format="dimension|reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_LobiBannerView">
+    <attr name="lobi_showTextOnly" format="boolean" />
+  </declare-styleable>
+</resources>

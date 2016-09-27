@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lobi_white"
+        android:paddingLeft="@dimen/lobi_padding_high"
+        android:paddingRight="@dimen/lobi_padding_high"
+        android:paddingBottom="@dimen/lobi_padding_high"
+        android:paddingTop="@dimen/lobi_padding_high"
+        >
+        <com.kayac.lobi.libnakamap.components.UIEditText
+            android:id="@+id/lobi_custom_dialog_content_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/lobi_padding_middle"
+            android:paddingRight="@dimen/lobi_padding_middle"
+            android:paddingBottom="@dimen/lobi_padding_low"
+            android:focusable="true"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:imeOptions="normal"
+            style="@style/lobi_textview_black_default"
+            android:background="@drawable/lobi_textbox_edit_selector"
+            />
+    </FrameLayout>
+</merge>

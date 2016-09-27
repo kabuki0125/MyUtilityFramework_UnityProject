@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lobisdk_rank_display">%1$d</string>
+    <string name="lobisdk_rank_display_none">沒有分數</string>
+</resources>

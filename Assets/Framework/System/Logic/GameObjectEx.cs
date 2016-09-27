@@ -16,7 +16,7 @@ public static class GameObjectEx
 		var o = Resources.Load(name) as GameObject;
 		var go = GameObject.Instantiate(o) as GameObject;
 		if(parent != null){
-			parent.AddChild(go);
+			parent.AddInChild(go);
 		}
 		return go;
 	}
@@ -36,7 +36,7 @@ public static class GameObjectEx
 	/// <summary>
 	/// 子オブジェクトを追加.
 	/// </summary>
-	public static void AddChild(this GameObject self, GameObject child)
+	public static void AddInChild(this GameObject self, GameObject child)
 	{
 		var p	= child.transform.localPosition;
 		var r	= child.transform.localRotation;
@@ -66,6 +66,28 @@ public static class GameObjectEx
 	/// </summary>
 	public static T GetOrAddComponent<T>(this GameObject self) where T : Component
 	{
-		return self.GetComponent<T>() ?? self.AddComponent<T>();
+        var rtn = self.GetComponent<T>();
+        if(rtn == null){
+            rtn = self.AddComponent<T>();
+        }
+        return rtn;
 	}
+    
+    /// <summary>
+    /// 自身と子供についている指定コンポーネントをまとめて全て取得する.
+    /// </summary>
+    public static T[] GetComponentsInChildrenAndMyself<T>(this GameObject self) where T : Component
+    {
+        var rtn = new List<T>();
+        var c = self.GetComponent<T>();
+        if(c != null){
+            rtn.Add(c);
+        }
+        rtn.AddRange(self.GetComponentsInChildren<T>());
+        if(rtn.Count <= 0){
+            Debug.LogError("[GameObjectEx] Error!! GetComponentsInChildrenOrMyself : Not found component.");
+            return null;
+        }
+        return rtn.ToArray();
+    }
 }

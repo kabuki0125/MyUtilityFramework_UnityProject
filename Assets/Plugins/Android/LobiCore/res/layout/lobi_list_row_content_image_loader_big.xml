@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/lobi_group_list_row_icon_height"
+    android:layout_height="@dimen/lobi_group_list_row_icon_width"
+    android:paddingBottom="@dimen/lobi_padding_low"
+    android:paddingTop="@dimen/lobi_padding_low" >
+
+    <com.kayac.lobi.libnakamap.components.ImageLoaderView
+        android:id="@+id/lobi_list_row_content_image_loader_big_image_view"
+        android:layout_width="@dimen/lobi_group_list_row_icon_height"
+        android:layout_height="@dimen/lobi_group_list_row_icon_width"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/lobi_list_row_content_image_loader_big_zoom_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:paddingRight="@dimen/lobi_padding_low"
+        android:paddingBottom="@dimen/lobi_padding_low"
+        android:visibility="gone"
+        android:src="@drawable/lobi_btn_gallery_zoom" />
+
+</FrameLayout>
