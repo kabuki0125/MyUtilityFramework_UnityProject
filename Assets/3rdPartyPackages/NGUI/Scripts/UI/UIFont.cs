@@ -645,7 +645,7 @@ public class UIFont : MonoBehaviour
 			{
 				mDynamicFont.RequestCharactersInTexture("j", mDynamicFontSize, mDynamicFontStyle);
 				mDynamicFont.GetCharacterInfo('j', out mTemp, mDynamicFontSize, mDynamicFontStyle);
-				mDynamicFontOffset = (mDynamicFontSize + mTemp.vert.yMax);
+				mDynamicFontOffset = (mDynamicFontSize + mTemp.maxY);
 				mDynamicFont.RequestCharactersInTexture(text, mDynamicFontSize, mDynamicFontStyle);
 			}
 		}
@@ -727,7 +727,7 @@ public class UIFont : MonoBehaviour
 				else
 				{
 					if (mDynamicFont.GetCharacterInfo(c, out mChar, mDynamicFontSize, mDynamicFontStyle))
-						x += (int)(mSpacingX + mChar.width);
+						x += (int)(mSpacingX + mChar.advance);
 				}
 #endif
 			}
@@ -810,7 +810,7 @@ public class UIFont : MonoBehaviour
 			else
 			{
 				if (mDynamicFont.GetCharacterInfo(currentCharacter, out mChar, mDynamicFontSize, mDynamicFontStyle))
-					glyphWidth += (int)mChar.width;
+					glyphWidth += (int)mChar.advance;
 			}
 #endif
 			// Remaining width after this glyph gets printed
@@ -958,7 +958,7 @@ public class UIFont : MonoBehaviour
 			else
 			{
 				if (mDynamicFont.GetCharacterInfo(ch, out mChar, mDynamicFontSize, mDynamicFontStyle))
-					glyphWidth += Mathf.RoundToInt(mChar.width);
+					glyphWidth += Mathf.RoundToInt(mChar.advance);
 			}
 #endif
 			// Remaining width after this glyph gets printed
@@ -1282,18 +1282,18 @@ public class UIFont : MonoBehaviour
 					if (!mDynamicFont.GetCharacterInfo(c, out mChar, mDynamicFontSize, mDynamicFontStyle))
 						continue;
 
-					v0.x =  invSize.x * (x + mChar.vert.xMin);
-					v0.y = -invSize.y * (y - mChar.vert.yMax + mDynamicFontOffset);
+					v0.x =  invSize.x * (x + mChar.minX);
+					v0.y = -invSize.y * (y - mChar.maxY + mDynamicFontOffset);
 					
-					v1.x = v0.x + invSize.x * mChar.vert.width;
-					v1.y = v0.y - invSize.y * mChar.vert.height;
+					v1.x = v0.x + invSize.x * (mChar.maxX - mChar.minX);	// "mChar.vert.width" is obsolete 2016/9/27;
+					v1.y = v0.y - invSize.y * (mChar.maxY - mChar.minY);	// "mChar.vert.height" is obsolete 2016/9/27;
 
-					u0.x = mChar.uv.xMin;
-					u0.y = mChar.uv.yMin;
-					u1.x = mChar.uv.xMax;
-					u1.y = mChar.uv.yMax;
+					u0.x = mChar.uvTopLeft.x;
+					u0.y = mChar.uvTopLeft.y;
+					u1.x = mChar.uvBottomRight.x;
+					u1.y = mChar.uvBottomRight.y;
 
-					x += mSpacingX + (int)mChar.width;
+					x += mSpacingX + (int)(mChar.maxX - mChar.minX);	// "mChar.vert.width" is obsolete 2016/9/27;
 
 					for (int b = 0; b < 4; ++b) cols.Add(color);
 

@@ -22,7 +22,7 @@ public static class PostProcessBuild
 	[PostProcessBuild (100)]
 	public static void OnPostProcessBuild (BuildTarget target, string path)
 	{
-		if (target == BuildTarget.iPhone) {
+		if (target == BuildTarget.iOS) {
 			PostProcessBuild_iOS (path);
 		}
 	}
