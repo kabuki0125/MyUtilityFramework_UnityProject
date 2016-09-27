@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lobi_section_divider"
+        android:background="@color/lobi_pearl_gray" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lobi_white_true"
+        android:padding="@dimen/lobi_padding_middle" >
+
+        <LinearLayout
+            android:id="@+id/lobi_chat_new_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/lobi_chat_new_message_name"
+                style="@style/lobi_textview_black_default_singleline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="98dp" />
+
+            <TextView
+                style="@style/lobi_textview_black_default_singleline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": " />
+
+            <TextView
+                android:id="@+id/lobi_chat_new_message_text"
+                style="@style/lobi_textview_black_default_singleline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="none" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/lobi_img_shadow" />
+
+</LinearLayout>

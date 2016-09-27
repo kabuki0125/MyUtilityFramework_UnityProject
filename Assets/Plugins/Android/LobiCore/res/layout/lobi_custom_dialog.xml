@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/lobi_padding_high"
+    android:paddingLeft="@dimen/lobi_custom_dialog_padding_left"
+    android:paddingRight="@dimen/lobi_custom_dialog_padding_right"
+    android:paddingTop="@dimen/lobi_padding_high"
+    tools:context=".LobiCore" >
+
+    <LinearLayout
+        android:id="@+id/lobi_custom_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <!-- header -->
+
+        <LinearLayout
+            android:id="@+id/lobi_custom_dialog_title_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lobi_white"
+                android:paddingBottom="@dimen/lobi_padding_high"
+                android:paddingTop="@dimen/lobi_padding_high" >
+
+                <!-- title -->
+
+                <TextView
+                    android:id="@+id/lobi_custom_dialog_title"
+                    style="@style/lobi_textview_black_very_large_shadow_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/lobi_padding_low"
+                    android:layout_marginLeft="@dimen/lobi_padding_high"
+                    android:layout_marginRight="@dimen/lobi_padding_high"
+                    android:layout_marginTop="@dimen/lobi_padding_low" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/lobi_line_orange_dialog" />
+        </LinearLayout> <!-- header end -->
+
+        <LinearLayout
+            android:id="@+id/lobi_custom_dialog_msg_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lobi_white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 1枚FrameLayoutかませないと、marginが効かない端末有 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lobi_custom_dialog_msg"
+                    style="@style/lobi_textview_black_very_large_shadow_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/lobi_margin_section"
+                    android:layout_marginLeft="@dimen/lobi_padding_high"
+                    android:layout_marginRight="@dimen/lobi_padding_high"
+                    android:layout_marginTop="@dimen/lobi_margin_section" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lobi_pearl_gray" />
+        </LinearLayout>
+
+        <!-- content -->
+
+        <View
+            android:id="@+id/lobi_custom_dialog_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+        <!-- footer -->
+        <!-- no button default -->
+
+        <View
+            android:id="@+id/lobi_custom_dialog_footer_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+</FrameLayout>

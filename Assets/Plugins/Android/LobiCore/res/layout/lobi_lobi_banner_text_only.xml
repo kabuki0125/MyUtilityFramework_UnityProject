@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="@dimen/lobi_padding_high" >
+
+    <com.kayac.lobi.libnakamap.components.ImageLoaderView
+        android:id="@+id/lobi_lobi_banner_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_lobi_banner_gradient"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/lobi_lobi_banner_description"
+            style="@style/lobi_textview_white_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/lobi_text_large" />
+    </LinearLayout>
+
+    <com.kayac.lobi.libnakamap.components.RoundCornerOverlayView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        lobi:lobi_color="@color/lobi_white_background"
+        lobi:lobi_radius="3dp" />
+
+</FrameLayout>

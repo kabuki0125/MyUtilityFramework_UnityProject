@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kayac.lobi.libnakamap.components.ListRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lobi_chat_group_info_settings_group_change_leader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/lobi_padding_middle"
+    lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_two_line"
+    lobi:lobi_leftContentLayoutId="@layout/lobi_list_row_content_image_loader_big"
+    lobi:lobi_rightContentVisible="false"
+    lobi:lobi_wrapContent="true" />
+

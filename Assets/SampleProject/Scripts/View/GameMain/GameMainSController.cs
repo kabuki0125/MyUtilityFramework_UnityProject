@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 /// <summary>
@@ -6,10 +7,6 @@ using System.Collections;
 /// </summary>
 public class GameMainSController : ScreenControllerBase
 {
-	/// <summary>
-	/// タイトル周りのオブジェクト
-	/// </summary>
-	public static ObjectGenerator ObjGenerator { get; private set; }
 	
 	/// <summary>
 	/// アンマネージド系のリソースを使うことを考慮
@@ -24,10 +21,8 @@ public class GameMainSController : ScreenControllerBase
 	/// 初期化.スクリーン展開前の通信処理がある場合はここで.
 	/// </summary>
 	/// <param name="didConnectEnd">通信終了時の処理</param>
-	public override void Init(System.Action<bool> didConnectEnd)
+	public override void Init(Action<bool> didConnectEnd)
 	{
-		var go = GameObjectEx.LoadAndCreateObject("GameMainObjects");
-		ObjGenerator = go.GetComponent<ObjectGenerator>();
 		base.Init(didConnectEnd);
 	}
 	
@@ -36,7 +31,7 @@ public class GameMainSController : ScreenControllerBase
 	/// </summary>
 	public override void CreateBootScreen()
 	{
-		var go = ObjGenerator.InstantiatePrefab(this.gameObject, "ScreenGameMain");
+		var go = ObjectGenerator.SharedInstance.InstantiatePrefab(this.gameObject, "ScreenGameMain");
 		go.GetComponent<ScreenGameMain>().Init();
 	}	
 }

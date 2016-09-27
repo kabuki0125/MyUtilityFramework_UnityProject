@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/lobi_margin_low"
+        android:layout_marginLeft="@dimen/lobi_margin_middle"
+        android:layout_marginRight="@dimen/lobi_margin_middle"
+        android:layout_marginTop="@dimen/lobi_margin_high" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/lobi_margin_low"
+            android:src="@drawable/icn_btn_list_present" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lobi_prize_groups_header"
+                android:textColor="@color/lobi_brown" />
+        </LinearLayout>
+   </LinearLayout>
+
+</LinearLayout>

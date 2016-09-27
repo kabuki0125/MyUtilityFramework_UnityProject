@@ -46,3 +46,4 @@ public abstract class ScreenControllerBase : MonoBehaviour, IDisposable
 		DontDestroyOnLoad(this.gameObject);
 	}
 }
+

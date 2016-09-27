@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lobi_white"
+        >
+        <TextView
+            android:id="@+id/lobi_custom_dialog_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/lobi_padding_high"
+            style="@style/lobi_textview_black_large"
+            />
+    </FrameLayout>
+</merge>

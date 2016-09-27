@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lobi_chat_list_item_options_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_bg_chat_reply"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:id="@+id/lobi_chat_list_item_like_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lobi_padding_chat_regular"
+            android:paddingTop="@dimen/lobi_padding_chat_regular" >
+
+            <ImageView
+                android:id="@+id/lobi_chat_list_item_like_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/lobi_icn_chat_good" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lobi_chat_list_item_like_text"
+                    style="@style/lobi_textview_gray_small_singleline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/lobi_padding_low"
+                    android:text="" />
+
+                <TextView
+                    style="@style/lobi_textview_gray_small_singleline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/lobi_padding_low"
+                    android:text="@string/lobi_chat_like"
+                    android:visibility="invisible" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lobi_chat_list_item_bottom_options_separator_0"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lobi_line_vertical_trnsparent" />
+
+        <LinearLayout
+            android:id="@+id/lobi_chat_list_item_dislike_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lobi_padding_chat_regular"
+            android:paddingTop="@dimen/lobi_padding_chat_regular" >
+
+            <ImageView
+                android:id="@+id/lobi_chat_list_item_dislike_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/lobi_icn_chat_bad" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lobi_chat_list_item_dislike_text"
+                    style="@style/lobi_textview_gray_small_singleline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/lobi_padding_low"
+                    android:text="@string/lobi_chat_reply" />
+
+                <TextView
+                    style="@style/lobi_textview_gray_small_singleline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/lobi_padding_low"
+                    android:text="@string/lobi_chat_dislike"
+                    android:visibility="invisible" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lobi_chat_list_item_bottom_options_separator_1"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lobi_line_vertical_trnsparent" />
+
+        <LinearLayout
+            android:id="@+id/lobi_chat_list_item_reply_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lobi_padding_chat_regular"
+            android:paddingTop="@dimen/lobi_padding_chat_regular" >
+
+            <ImageView
+                android:id="@+id/lobi_chat_list_item_reply_button_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/lobi_icn_chat_reply" />
+
+            <TextView
+                android:id="@+id/lobi_chat_list_item_reply_text"
+                style="@style/lobi_textview_gray_small_singleline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingLeft="@dimen/lobi_padding_low"
+                android:text="@string/lobi_chat_reply" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

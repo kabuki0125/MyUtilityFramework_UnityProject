@@ -1,0 +1,160 @@
+"KLC_MENU_SECTION_TITLE_MENU" = "MENU";
+"KLC_MENU_SECTION_TITLE_GAME_MENU" = "GAME MENU";
+"KLC_CANCEL" = "キャンセル";
+
+"KLC_MENU_REC" = "みんなの動画";
+"KLC_MENU_RANKING" = "ランキング";
+"KLC_MENU_CHAT" = "チャット";
+"KLC_MENU_FRIENDS" = "友だちリスト";
+"KLC_MENU_INVITE" = "友だちを招待する";
+"KLC_MENU_BIND" = "Lobiと連携";
+"KLC_MENU_CONNECTAPP" = "Lobiにログインする";
+"KLC_MENU_SECTION_TITLE_CONTENT" = "コンテンツメニュー";
+"KLC_MENU_SECTION_TITLE_USER" = "ユーザーメニュー";
+"KLC_MENU_FOLLOW_LIST" = "フォローリスト";
+"KLC_MENU_FOLLOWER_LIST" = "フォロワーリスト";
+"KLC_MENU_NOT_LOGIN" = "Lobi未ログイン";
+"KLC_PROFILE_TITLE_NORMAL" = "プロフィール";
+"KLC_PROFILE_MENU_TITLE_ACCUSE" = "通報する";
+"KLC_PROFILE_MENU_TITLE_KICK" = "グループから\n追い出す";
+"KLC_PROFILE_MENU_TITLE_BLOCK" = "ブロック";
+"KLC_PROFILE_BUTTON_REMOVE" = "友だち";
+"KLC_PROFILE_BUTTON_ADD" = "友だちに追加";
+"KLC_PROFILE_BUTTON_CHAT" = "チャットする";
+"KLC_PROFILE_CONTACTS" = "友だち %@人";
+"KLC_PROFILE_%@_VIDEOS" = "%@ videos";
+"KLC_PROFILE_DESCRIPTION_EDIT_TEXT" = "プロフィールを入力できます";
+"KLC_PROFILE_DEFAULT_USER_HEADER" = "Lobiアカウント";
+"KLC_PROFILE_NOT_CONNECT_LOBI" = "Lobiとつながっていません";
+"KLC_PROFILE_EDIT" = "プロフィール編集";
+"KLC_FRIEND_LIST" = "友だちリスト";
+"KLC_FRIEND_ADD" = "友だち追加";
+"KLC_LOBI_FRIEND_ADD" = "Lobiの友だちを追加";
+"KLC_SORT_NAME" = "名前";
+"KLC_SORT_NEW" = "新着";
+"KLC_FRIEND_SEARCH" = "絞り込み";
+"KLC_SEARCH_APP_FRIENDS" = "ゲームの友だちを探す";
+
+"KLC_PROFILE_ALERT_TITLE_ADD_FRIEND" = "友だちに追加しますか？";
+"KLC_ADD_FRIEND_SUCCESS" = "友だちに追加しました！";
+"KLC_PROFILE_ALERT_TITLE_CREATE_1ON1" = "グループを作成しますか？";
+"KLC_PROFILE_ALERT_TITLE_REMOVE_CONTACT" = "友だちから外しますか？";
+"KLC_ACCUSE_ALERT" = "通報理由を入力して下さい";
+"KLC_PROFILE_ACCUSE_SUCCESS" = "通報しました";
+"KLC_BLOCK_ALERT_TITLE" = "ブロック機能";
+"KLC_BLOCK_ALERT_MESSAGE" = "このユーザーをブロックしてもよろしいですか？\nブロックすると、お互いがLobiのコンタクトリストから削除されます。また、あなたがリーダーのグループからこのユーザーが削除されます。このユーザーがリーダーのグループからあなたが削除されます。お互いのどちらもリーダーではないグループには、あなたもこのユーザーも表示されます。\n\nブロックは後から設定画面で解除することができます。";
+"KLC_BLOCK_RESPONSE_SUCCESS" = "ブロックしました";
+"KLC_BLOCK_USER_LIST" = "ブロックユーザーリスト";
+"KLC_BLOCK_USER_LIST_FAILED" = "ブロックユーザーリストを取得できませんでした";
+"KLC_BLOCK_UNLOCK" = "ブロック解除";
+"KLC_BLOCK_NOT_FOUND" = "結果なし";
+
+"KLC_OK" = "OK";
+"KLC_ERROR_UNKOWN" = "不明なエラー";
+"KLC_ERROR_401" = "401トークンが不正です";
+"KLC_ERROR_404_NOT_FOUND" = "接続先が見つかりませんでした。インターネットに接続できることを確認し、もう一度お試しください";
+"KLC_ERROR_500_OOPS" = "接続に失敗しました";
+"KLC_ERROR_504_TIMEOUT" = "接続がタイムアウトしました。インターネットに接続できることを確認し、もう一度お試しください";
+"KLC_ERROR_502_MAINTENANCE" = "現在メンテナンス中です、しばらくお待ちください";
+
+"KLC_ACKNOWLEDGEMENT_FILE" = "acknowledgement_ja";
+"KLC_BIND_NAKAMAP_APP" = "Lobiにログインする";
+"KLC_BLOCK_USER_LIST" = "ブロックユーザーリスト";
+"KLC_CANCEL" = "キャンセル";
+"KLC_FONT_SIZE_LARGE" = "大";
+"KLC_FONT_SIZE_MIDDLE" = "中";
+"KLC_FONT_SIZE_SMALL" = "小";
+"KLC_MAIL_DEAR_TEAM_%@_%@_%@_%@" = "Lobiチームへ\n\n\n---\nLobiCoreSDK: version %@, platform: %@, os: %@, u: %@";
+"KLC_MENU_SETTINGS" = "設定";
+"KLC_SERVER_TITLE" = "サーバー";
+"KLC_SETTINGS_ACCOUNT" = "アカウント";
+"KLC_SETTINGS_ACT_ON_SCT" = "特定商取引に基づく表示";
+"KLC_SETTINGS_CELL_CHAT_ALPHA" = "ふきだし不透明度";
+"KLC_SETTINGS_CELL_TUTORIAL" = "Lobiとは";
+"KLC_SETTINGS_FAQ_CHAT" = "チャットのよくある質問";
+"KLC_SETTINGS_FAQ_REC" = "LobiPlayのよくある質問";
+"KLC_SETTINGS_FEEDBACK" = "ご意見・ご要望・ご質問";
+"KLC_SETTINGS_FONT_SIZE" = "文字サイズ";
+"KLC_SETTINGS_SECTION_TITLE_BLOCK" = "ブロック";
+"KLC_SETTINGS_SECTION_TITLE_CHAT" = "基本設定";
+"KLC_SETTINGS_SECTION_TITLE_ETC" = "その他";
+"KLC_SETTINGS_SECTION_TITLE_HELP" = "ヘルプ";
+"KLC_SETTINGS_SPECIAL_THANKS" = "謝辞";
+"KLC_SETTINGS_TERMS_OF_USE" = "ご利用規約";
+"KLC_SETTINGS_VERSION" = "バージョン";
+"KLC_SETTINGS_WHATS_NEW" = "お知らせブログ";
+"KLC_TWITTER_FOLLOW_US" = "TwitterでLobiチームをフォロー";
+
+"KLC_USER_SETTINGS_TITLE" = "プロフィール編集";
+"KLC_USER_SETTINGS_SECTION_COVER" = "カバー画像変更";
+"KLC_USER_SETTINGS_SECTION_ICON" = "プロフィール画像";
+"KLC_USER_SETTINGS_SECTION_NAME" = "投稿者名";
+"KLC_USER_SETTINGS_SECTION_DESCRIPTION" = "紹介文";
+"KLC_USER_SETTINGS_CELL_COVER" = "カバー画像";
+"KLC_USER_SETTINGS_CELL_ICON" = "プロフィール画像";
+"KLC_USER_DESCRIPTION_PLACEHOLDER" = "紹介文";
+"KLC_USER_SETTINGS_FAILED_MESSAGE" = "プロフィールの変更に\n失敗しました";
+"KLC_USER_SETTINGS_FAILED_TITLE" = "変更を元に戻しますか？";
+"KLC_USER_SETTINGS_DESTROY" = "元に戻す";
+"KLC_USER_SETTINGS_DISCARD_CHANGE" = "変更をキャンセルしてプロフィール画面に戻りますか？";
+"KLC_PUBLIC_GROUP" = "参加している公開グループ";
+
+"KLC_ALERT_NO" = "いいえ";
+"KLC_ALERT_YES" = "はい";
+
+"KLC_PHOTO_FROM_LIBRARY" = "ライブラリから選択";
+"KLC_PHOTO_FROM_CAMERA" = "写真を撮る";
+"KLC_SAVE" = "保存";
+"KLC_NOTICE_TITLE" = "通知";
+
+"KLC_DATE_NOW" = "今";
+"KLC_DATE_MONTHS_%d" = "%dヶ月前";
+"KLC_DATE_MINS_%d" = "%d分前";
+"KLC_DATE_YEARS_%d_MONTHS_%d" = "%d年%dヶ月前";
+"KLC_DATE_YEARS_%d" = "%d年前";
+"KLC_DATE_DAYS_%d" = "%d日前";
+"KLC_DATE_HOURS_%d" = "%d時間前";
+"KLC_DATE_SECS_%d" = "%d秒前";
+
+"KLC_LOGIN_DONE" = "Lobiでプロフィールを開く";
+"KLC_LOBI_ACCOUNT" = "Lobiでプロフィールを開く";
+"KLC_NOT_LOGIN" = "動画に関する通知が受け取れるよ！";
+"KLC_LOBI_NAME_%@" = "Lobi：%@";
+
+"KLC_FOLLOW" = "フォロー";
+"KLC_FOLLOWING" = "フォロー中";
+"KLC_FOLLOW_LIST" = "フォロー";
+"KLC_FOLLOWER_LIST" = "フォロワー";
+"KLC_LETS_LOGIN_LOBI" = "Lobiにログインしよう!";
+"KLC_LOGIN" = "ログイン";
+"KLC_PROFILE_MY_FOLLOW_LIST_ZERO" = "このゲームをプレイしているユーザーを\nフォローしていません。\n人気の動画をチェックしてみよう！";
+"KLC_PROFILE_MY_FOLLOWER_LIST_ZERO" = "このゲームをプレイしているフォロワーはいません。\n人気の動画をチェックしてみよう！";
+
+"KLC_DEFAULT_LOGIN_ENTRANCE_TITLE" = "Lobiへようこそ！";
+"KLC_DEFAULT_LOGIN_ENTRANCE_MESSAGE" = "Lobiでは、友だちの投稿動画をフォローしたり、動画にコメントしたりすることができます。";
+"KLC_DEFAULT_LOGIN_ENTRANCE_CANCEL" = "後で";
+"KLC_DEFAULT_LOGIN_ENTRANCE_OK" = "開く";
+
+"KLC_POPUP_LOGIN_SUBTEXT" = "動画に関する通知が受け取れるよ！";
+"KLC_POPUP_APP_LAUNCH_MAINTEXT" = "アクティビティをチェック！";
+"KLC_POPUP_APP_LAUNCH_SUBTEXT" = "フォローしたユーザーの最新情報など";
+"KLC_LAUNCH_LOBI_APP" = "起動する";
+"KLC_GAME_NAME_LABEL" = "投稿者名：%@";
+"KLC_FOLLOW_LIST_SECTION_INGAME" = "このゲームをプレイしているLobiユーザー（%d）";
+"KLC_POPUP_LOGIN_SUBTEXT" = "動画に関する通知が受け取れるよ！";
+
+"KLC_DEFAULT_PROMOTE_NOTICE_OPEN" = "ログインして気になるユーザーをフォローしよう！";
+"KLC_DEFAULT_PROMOTE_NOTICE_UPLOAD" = "フォロワーを増やしてあなたの動画にファンを付けましょう！";
+
+"KLC_LIST_ZERO_COM_ERROR" = "リストの読み込みに\n失敗しました";
+"KLC_PROFILE_FOLLOW_LIST_ZERO" = "まだフォローしていません";
+"KLC_PROFILE_FOLLOWER_LIST_ZERO" = "まだフォローされていません";
+"KLC_PROFILE_PUBLIC_USER_LIST_ZERO" = "表示できるユーザー情報がありません";
+
+"KLC_NOTICE_ZERO" = "あなたへの通知はまだありません。";
+
+"KLC_NAVIGATION_TITLE_ACCEPT_TERMS" = "ご利用規約";
+"KLC_BUTTON_TITLE_ACCEPT_TERMS" = "同意する";
+
+"KLC_LIKE_BUTTON" = "ぐーする";
+"KLC_DONE" = "完了";

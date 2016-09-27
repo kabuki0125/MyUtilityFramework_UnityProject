@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lobi_notification_list_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="horizontal"
+    android:padding="@dimen/lobi_margin_high" >
+
+    <com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
+        android:id="@+id/lobi_notification_list_item_user_icon"
+        android:layout_width="@dimen/lobi_icon_medium"
+        android:layout_height="@dimen/lobi_icon_medium"
+        android:layout_marginRight="@dimen/lobi_margin_middle"
+        android:scaleType="fitCenter"
+        lobi:lobi_useMemoryCache="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lobi_notification_list_item_activity"
+            style="@style/lobi_textview_black_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lobi_notification_list_item_message"
+            style="@style/lobi_textview_black_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lobi_margin_middle"
+            android:orientation="horizontal" >
+
+            <com.kayac.lobi.libnakamap.components.ImageLoaderView
+                android:id="@+id/lobi_notification_list_item_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/lobi_notification_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/lobi_margin_low"
+                android:scaleType="fitCenter"
+                lobi:lobi_useMemoryCache="false" />
+
+            <TextView
+                android:id="@+id/lobi_notification_list_item_date"
+                style="@style/lobi_textview_gray_very_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

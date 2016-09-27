@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/lobi_padding_low"
+    android:paddingLeft="@dimen/lobi_padding_middle"
+    android:paddingRight="@dimen/lobi_padding_middle"
+    android:paddingTop="@dimen/lobi_padding_low" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lobi_base_list_selector"
+        android:duplicateParentState="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/lobi_padding_low" >
+
+        <com.kayac.lobi.libnakamap.components.FramedImageLoader
+            android:id="@+id/lobi_ranking_icon"
+            android:layout_width="@dimen/lobi_group_list_row_icon_width"
+            android:layout_height="@dimen/lobi_group_list_row_icon_height"
+            lobi:lobi_frameResourceId="@drawable/lobi_frame_list" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/lobi_padding_high"
+            android:paddingRight="@dimen/lobi_padding_middle" >
+
+            <TextView
+                android:id="@+id/lobi_ranking_rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/lobi_black" />
+
+            <TextView
+                android:id="@+id/lobi_ranking_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

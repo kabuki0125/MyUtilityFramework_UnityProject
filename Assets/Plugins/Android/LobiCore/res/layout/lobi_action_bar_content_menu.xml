@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/lobi_action_bar_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scaleType="center"
+        android:src="@drawable/lobi_action_bar_button_menu_selector_01" />
+
+    <TextView
+        android:id="@+id/lobi_action_bar_title"
+        style="@style/lobi_textview_white_very_large_twoline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/lobi_margin_high"
+        android:layout_weight="1.0"
+        android:singleLine="true" />
+
+</LinearLayout>

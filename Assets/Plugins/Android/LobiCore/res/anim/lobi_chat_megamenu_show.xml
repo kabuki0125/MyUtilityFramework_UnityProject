@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shareInterpolator="false"
+        android:fillEnabled="true"
+        android:fillAfter="true" >
+
+        <!-- 上からスライド -->
+        <translate
+            android:duration="@integer/lobi_chat_megamenu_animation_duration"
+            android:fromXDelta="0%"
+            android:toXDelta="0%"
+            android:fromYDelta="-100%"
+            android:toYDelta="0%"
+            android:interpolator="@android:anim/accelerate_decelerate_interpolator" />
+        
+</set>

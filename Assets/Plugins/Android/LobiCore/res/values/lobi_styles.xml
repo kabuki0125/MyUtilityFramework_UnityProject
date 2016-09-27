@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <style name="Animations_Fading">
+    <item name="@android:windowEnterAnimation">@android:anim/fade_in</item>
+    <item name="@android:windowExitAnimation">@android:anim/fade_out</item>
+  </style>
+  <style name="lobi_Animation_PopupWindow" />
+  <style name="lobi_action_bar" parent="@android:style/Widget">
+    <item name="android:background">@drawable/lobi_action_bar_background</item>
+    <item name="android:layout_height">48dp</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>
+  <style name="lobi_custom_check_box" parent="@android:style/Widget.CompoundButton.CheckBox">
+    <item name="android:background">@drawable/lobi_checkbox_selector</item>
+    <item name="android:button">@drawable/lobi_checkbox_selector</item>
+    <item name="android:layout_height">@dimen/lobi_checkbox_height</item>
+    <item name="android:layout_width">@dimen/lobi_checkbox_width</item>
+  </style>
+  <style name="lobi_custom_check_box_small" parent="@android:style/Widget.CompoundButton.CheckBox">
+    <item name="android:background">@drawable/lobi_checkbox_small_selector</item>
+    <item name="android:button">@drawable/lobi_checkbox_small_selector</item>
+    <item name="android:layout_height">30dp</item>
+    <item name="android:layout_width">30dp</item>
+  </style>
+  <style name="lobi_custom_dialog" parent="@android:style/Theme.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+  <style name="lobi_custom_dialog_button" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_custom_dialog_button_selector</item>
+    <item name="android:textColor">@drawable/lobi_custom_dialog_button_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_green_button_l" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_button_l_green_selector</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:textColor">@drawable/lobi_button_white_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_green_button_s" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_button_s_green_selector</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:paddingBottom">0dp</item>
+    <item name="android:paddingTop">0dp</item>
+    <item name="android:textColor">@drawable/lobi_button_white_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_group_wrapper">
+    <item name="lobi_indexVisible">false</item>
+  </style>
+  <style name="lobi_list_row">
+    <item name="lobi_indexVisible">false</item>
+  </style>
+  <style name="lobi_orange_button_l" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_button_l_orange_selector</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:textColor">@drawable/lobi_button_white_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_orange_button_s" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_button_s_orange_selector</item>
+    <item name="android:includeFontPadding">false</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">@dimen/lobi_button_small</item>
+    <item name="android:paddingBottom">0dp</item>
+    <item name="android:paddingTop">0dp</item>
+    <item name="android:textColor">@drawable/lobi_button_white_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_profile_cover">
+    <item name="lobi_coverImageMaxHeight">@dimen/lobi_profile_cover_max</item>
+    <item name="lobi_coverImageMinHeight">@dimen/lobi_profile_cover_min</item>
+    <item name="lobi_iconTopRunOver">@dimen/lobi_profile_cover_icon_top_run_over</item>
+  </style>
+  <style name="lobi_textview_black_default" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_black_default_shadow_white" parent="@android:style/Widget.TextView">
+    <item name="android:shadowColor">@color/lobi_text_shadow_white</item>
+    <item name="android:shadowDx">0.0</item>
+    <item name="android:shadowDy">-1.0</item>
+    <item name="android:shadowRadius">0.5</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_black_default_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_black_default_singleline_shadow_white" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:shadowColor">@color/lobi_text_shadow_white</item>
+    <item name="android:shadowDx">0.0</item>
+    <item name="android:shadowDy">-1.0</item>
+    <item name="android:shadowRadius">0.5</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_black_default_two_lines" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:textColor">@color/lobi_text_black</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_black_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_textview_black_large_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_textview_black_small" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_black_small_two_lines" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:textColor">@color/lobi_text_black</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_black_very_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_black_very_large_shadow_black" parent="@android:style/Widget.TextView">
+    <item name="android:shadowColor">@color/lobi_text_shadow_black</item>
+    <item name="android:shadowDx">0.0</item>
+    <item name="android:shadowDy">-1.0</item>
+    <item name="android:shadowRadius">0.5</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_black_very_large_shadow_white" parent="@android:style/Widget.TextView">
+    <item name="android:shadowColor">@color/lobi_text_shadow_white</item>
+    <item name="android:shadowDx">0.0</item>
+    <item name="android:shadowDy">-1.0</item>
+    <item name="android:shadowRadius">0.5</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_black_very_large_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_black_very_small" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_black</item>
+    <item name="android:textSize">@dimen/lobi_text_very_small</item>
+  </style>
+  <style name="lobi_textview_brown_default" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_brown</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_brown_small_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_brown</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_brown_very_small_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_brown</item>
+    <item name="android:textSize">@dimen/lobi_text_very_small</item>
+  </style>
+  <style name="lobi_textview_gray_default" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_gray_default_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_gray_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_textview_gray_small" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_gray_small_shadow_white" parent="@android:style/Widget.TextView">
+    <item name="android:shadowColor">@color/lobi_text_shadow_white</item>
+    <item name="android:shadowDx">0.0</item>
+    <item name="android:shadowDy">-1.0</item>
+    <item name="android:shadowRadius">0.5</item>
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_gray_small_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_gray_very_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_gray_very_large_shadow_white" parent="@android:style/Widget.TextView">
+    <item name="android:shadowColor">@color/lobi_text_shadow_white</item>
+    <item name="android:shadowDx">0.0</item>
+    <item name="android:shadowDy">-1.0</item>
+    <item name="android:shadowRadius">0.5</item>
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_gray_very_small" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_very_small</item>
+  </style>
+  <style name="lobi_textview_pearl_gray_large_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_pearl_gray</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+  <style name="lobi_textview_orange_default_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_orange</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_orange_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_orange</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_textview_orange_large_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_orange</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_textview_orange_small" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_orange</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_white_default" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_text_white</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+  <style name="lobi_textview_white_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_text_white</item>
+    <item name="android:textSize">@dimen/lobi_text_large</item>
+  </style>
+  <style name="lobi_textview_white_small" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_text_white</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_white_small_singleline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/lobi_text_white</item>
+    <item name="android:textSize">@dimen/lobi_text_small</item>
+  </style>
+  <style name="lobi_textview_white_very_large" parent="@android:style/Widget.TextView">
+    <item name="android:textColor">@color/lobi_text_white</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_textview_white_very_large_twoline" parent="@android:style/Widget.TextView">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:textColor">@color/lobi_text_white</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_toggle_on_off_button" parent="@android:style/Widget">
+    <item name="android:layout_height">25dp</item>
+    <item name="android:layout_width">75dp</item>
+  </style>
+  <style name="lobi_trash_button" parent="@android:style/Widget.Button">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+  </style>
+  <style name="lobi_white_button_l" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_button_l_white_selector</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:textColor">@drawable/lobi_button_gray_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_very_large</item>
+  </style>
+  <style name="lobi_white_button_l_small_text" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/lobi_button_l_white_selector</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:textColor">@drawable/lobi_button_gray_text_selector</item>
+    <item name="android:textSize">@dimen/lobi_text_default</item>
+  </style>
+    <style name="LobiRecText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/lobi_rec_black</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/lobi_rec_text_default</item>
+    </style>
+
+    <style name="LobiRecText.VerySmall" parent="LobiRecText">
+        <item name="android:textSize">@dimen/lobi_rec_text_very_small</item>
+    </style>
+
+    <style name="LobiRecText.VerySmall.Gray" parent="LobiRecText.VerySmall">
+        <item name="android:textColor">@color/lobi_rec_gray</item>
+    </style>
+
+    <style name="LobiRecText.Small" parent="LobiRecText">
+        <item name="android:textSize">@dimen/lobi_rec_text_small</item>
+    </style>
+
+    <style name="LobiRecText.Small.Gray" parent="LobiRecText.Small">
+        <item name="android:textColor">@color/lobi_rec_gray</item>
+    </style>
+
+    <style name="LobiRecText.VeryLarge" parent="LobiRecText">
+        <item name="android:textSize">@dimen/lobi_rec_text_very_large</item>
+    </style>
+
+    <style name="LobiRecText.VeryLarge.White" parent="LobiRecText.VeryLarge">
+        <item name="android:textColor">@color/lobi_rec_white</item>
+    </style>
+
+    <style name="LobiRecContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="LobiRecLine">
+        <item name="android:background">@color/lobi_rec_pearl_gray</item>
+    </style>
+
+    <style name="LobiRecLine.Horizontal" parent="LobiRecLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+    </style>
+
+    <style name="LobiRecLine.Vertical" parent="LobiRecLine">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LobiRecLine.Vertical.Gray" parent="LobiRecLine.Vertical">
+        <item name="android:background">@color/lobi_rec_gray</item>
+    </style>
+
+    <style name="LobiRecButtonShare">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">#000</item>
+    </style>
+
+    <style name="LobiRecActionBar">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/lobi_action_bar_background</item>
+    </style>
+    
+    <style name="lobi_textview_chat_profile_button" parent="@style/lobi_textview_black_very_small">
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+    </style>
+
+    <style name="lobi_textview_chat_profile_button_red" parent="@style/lobi_textview_chat_profile_button">
+        <item name="android:textColor">@color/lobi_red</item>
+    </style>
+</resources>

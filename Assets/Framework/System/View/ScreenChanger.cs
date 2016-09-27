@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
+using MyLibrary.Unity;
+
 
 /// <summary>
 /// スクリーン切り替えロジック
@@ -8,16 +11,16 @@ using System.Collections;
 public class ScreenChanger : MonoBehaviour
 {
 	/// シーン切り替え前にやりたい処理
-	public static event Action WillChangeScene;
+    public static event Action<string/*nextSceneName*/> WillChangeScene;
 	/// シーン切り替え後にやりたい処理
-	public static event Action DidEndChangeScene;
+	public static event Action<string/*nextSceneName*/> DidEndChangeScene;
 
 	/// <summary>
 	/// 共通インスタンス
 	/// </summary>
 	public static ScreenChanger SharedInstance { get; private set; }
 
-	#region 各種シーン移動処理.
+#region 各種シーン移動処理.
 
 	/// <summary>
 	/// タイトルシーンに移動
@@ -25,20 +28,21 @@ public class ScreenChanger : MonoBehaviour
 	public void GoToTitle(Action didProcEnd = null)
 	{
 		var ctrl = ScreenControllerBase.Create<TitleSController>();
-		ScreenChanger.SharedInstance.Exec("SampleScene1", ctrl, didProcEnd);
+		ScreenChanger.SharedInstance.Exec("title", ctrl, didProcEnd);
 	}
-	/// <summary>
-	/// ゲームメインシーンに移動
-	/// </summary>
-	public void GoToGameMain(Action didProcEnd = null)
-	{
-		var ctrl = ScreenControllerBase.Create<GameMainSController>();
-		ScreenChanger.SharedInstance.Exec("SampleScene2", ctrl, didProcEnd);
-	}
+    
+    public void Reboot()
+    {
+        if(m_currentCtrl != null){
+            m_currentCtrl.Dispose();
+            m_currentCtrl = null;
+        }
+        SceneManager.LoadScene("boot");
+    }
 
-	#endregion
+#endregion
 
-	#region internal proc.
+#region internal proc.
 
 	// シーン切り替え実行
 	private void Exec(string nextSceneName, ScreenControllerBase ctrl, Action didProcEnd = null)
@@ -70,18 +74,18 @@ public class ScreenChanger : MonoBehaviour
 	private IEnumerator ChangeSceneproc(string nextSceneName, Action didProcEnd)
 	{
 		if(WillChangeScene != null){
-			WillChangeScene();
+			WillChangeScene(nextSceneName);
 		}
 
-		Application.LoadLevel(nextSceneName);
-
+        SceneManager.LoadScene(nextSceneName);
+        
 		yield return Resources.UnloadUnusedAssets();
-		GC.Collect();
-		GC.WaitForPendingFinalizers();
-		GC.Collect();
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+        GC.Collect();
 
 		if(DidEndChangeScene != null){
-			DidEndChangeScene();
+            DidEndChangeScene(nextSceneName);
 		}
 		if(didProcEnd != null){
 			didProcEnd();
@@ -97,5 +101,6 @@ public class ScreenChanger : MonoBehaviour
 
 	private ScreenControllerBase m_currentCtrl;
 
-	#endregion
+#endregion
+    
 }

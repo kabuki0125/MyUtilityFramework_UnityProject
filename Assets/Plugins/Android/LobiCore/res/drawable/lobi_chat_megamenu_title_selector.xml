@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 無効の場合は、タップ時に色を変更しない -->
+    <item
+        android:state_enabled="false"
+        android:state_pressed="false"
+        android:color="@color/lobi_gray_light" >
+    </item>
+    
+    <item
+        android:state_enabled="false"
+        android:state_pressed="true"
+        android:color="@color/lobi_gray_light" >
+    </item>
+    
+    <!-- デフォルト -->
+    <item android:color="@color/lobi_text_gray" />
+</selector>

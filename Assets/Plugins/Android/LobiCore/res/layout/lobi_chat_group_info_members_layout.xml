@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:id="@+id/lobi_chat_group_info_members_layout_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/lobi_padding_high"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        />
+
+    <TextView
+        android:id="@+id/lobi_chat_group_info_members_layout_num_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="center_vertical"
+        style="@style/lobi_textview_gray_default"
+        />
+    <ImageView
+        android:src="@drawable/lobi_icn_arrow_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="center_vertical"
+        />
+</merge>

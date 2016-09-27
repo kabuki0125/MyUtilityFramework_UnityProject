@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <array name="lobi_chat_megamenu_icon_images_1">
+    <item>@drawable/lobi_icn_megamenu_detail</item>
+    <item>@drawable/lobi_icn_megamenu_goo</item>
+    <item>@drawable/lobi_icn_megamenu_invite</item>
+    <item>@drawable/lobi_icn_megamenu_map_selector</item>
+    <item>@drawable/lobi_icn_megamenu_shout_on</item>
+    <item>@drawable/lobi_icn_megamenu_setting</item>
+  </array>
+  <array name="lobi_chat_megamenu_icon_images_2">
+    <item>@null</item>
+    <item>@null</item>
+    <item>@null</item>
+    <item>@null</item>
+    <item>@drawable/lobi_icn_megamenu_shout_off</item>
+    <item>@null</item>
+  </array>
+  <array name="lobi_like_ranking_fixed_tab_titles">
+    <item>@string/lobi_like_many</item>
+    <item>@string/lobi_dislike_many</item>
+  </array>
+  <string-array name="lobi_androidmanifest_resources">
+    <item>@string/lobi_chat_streaming</item>
+  </string-array>
+  <string-array name="lobi_chat_megamenu_label_1">
+    <item>@string/lobi_group_detail_title</item>
+    <item>@string/lobi_like_many_chats</item>
+    <item>@string/lobi_sdk_menu_invite_friend</item>
+    <item>@string/lobi_members_location</item>
+    <item>@string/lobi_shout_on</item>
+    <item>@string/lobi_group_settings</item>
+  </string-array>
+  <string-array name="lobi_chat_megamenu_label_2">
+    <item>@null</item>
+    <item>@null</item>
+    <item>@null</item>
+    <item>@null</item>
+    <item>@string/lobi_shout_off</item>
+    <item>@null</item>
+  </string-array>
+  <string-array name="lobi_group_list_fixed_tab_titles">
+    <item>@string/lobi_private_groups</item>
+    <item>@string/lobi_public_groups</item>
+    <item>@string/lobi_friend_list</item>
+  </string-array>
+  <string-array name="lobi_group_list_fixed_tab_titles_public_disable">
+    <item>@string/lobi_private_groups</item>
+    <item>@string/lobi_friend_list</item>
+  </string-array>
+  <string-array name="lobi_group_list_fixed_tab_titles_private_disable">
+    <item>@string/lobi_public_groups</item>
+    <item>@string/lobi_friend_list</item>
+  </string-array>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:id="@+id/lobi_group_wrapper_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_base_list_selector"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lobi_padding_high"
+        android:paddingLeft="@dimen/lobi_padding_middle"
+        android:paddingRight="@dimen/lobi_padding_middle"
+        android:paddingTop="@dimen/lobi_padding_high" >
+
+        <LinearLayout
+            android:id="@+id/lobi_group_wrapper_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp" >
+
+            <TextView
+                android:id="@+id/lobi_group_wrapper_title"
+                style="@style/lobi_textview_black_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:paddingTop="@dimen/lobi_padding_high" />
+        </FrameLayout>
+    </LinearLayout>
+
+</merge>

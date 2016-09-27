@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -24,17 +25,69 @@ namespace Net
 			get { return "/game/api/" + ApiName + ".php" ; }
 		}
 
-		public void SetCommand(NetCommand cmd)
+		/// <summary>
+		/// ローディング表示をするか？
+		/// </summary>
+		public bool IsDisplayLoading = true;
+
+		/// <summary>
+		/// 通信中か？
+		/// </summary>
+		public bool         IsConnecting { get ; private set ; }
+
+		/// <summary>
+		/// なにかしらのエラーが発生したか？
+		/// </summary>
+		public bool         IsError      { get ; private set ; }
+
+		/// <summary>
+		/// 通信結果情報
+		/// </summary>
+		public NetResponse  Response     { get ; private set ; }
+        
+        
+        public void SetCommand(NetCommand cmd)
 		{
 			Command = cmd ;
 		}
 
 		/// <summary>
-		/// NetRequestManager 処理用： POST データをハッシュ値文字列で返す.
+		/// ゲームサーバと通信を開始する.
 		/// </summary>
-		public string ToPostDataWithHash()
+		public void ConnectToServer(Action<NetResponse> didLoad = null)
 		{
-#if _NC_ENABLE_NET_DEBUG_
+			m_didLoad    = didLoad;
+			IsConnecting = true;
+			IsError      = false;
+//			this.SetVersions();
+			NetRequestManager.SharedInstance.RequestToServer(this);
+		}
+
+		/// <summary>
+		/// NetRequestManager 処理用： 通信終了時処理
+		/// </summary>
+		public void DidLoad(NetResponse response)
+		{
+			Response = response;
+			IsError = Response.IsError;
+#if _ENABLE_NET_DEBUG_
+			if(Response.ResultBase != null && Response.ResultBase.NewSessionId != 0){
+				m_lastEnabledSessionId = Response.ResultBase.NewSessionId;
+			}
+#endif
+			
+			IsConnecting = false;
+			if(this.m_didLoad != null){
+				this.m_didLoad(Response);
+            }
+        }
+        
+        /// <summary>
+        /// NetRequestManager 処理用： POST データをハッシュ値文字列で返す.
+        /// </summary>
+        public string ToPostDataWithHash()
+        {
+#if _ENABLE_NET_DEBUG_
 			if ( this.debug != 0 ) {
 				return this.ToPostData() + "&secret_key=1d050924e71c34b689879a1cc39dcd02" ;// ダミーリクエスト時は、チェック処理通らないシークレットキーで。
 			}
@@ -52,14 +105,15 @@ namespace Net
 		{
 			// 前回の通信コマンド実行時に取得したセッションIDを使う.
 			string sid = "session_id=";
-#if _NC_ENABLE_NET_DEBUG_
-			if( NetCache.SharedInstance.LastResultBase.NewSessionId == 0 ){
-				sid += lastEnabledSessionId;
+			// TODO : セッションIDの更新処理
+#if _ENABLE_NET_DEBUG_
+			if( 今回の通信セッションID == 0 ){
+				sid += m_lastEnabledSessionId;
 			}else{
 				sid += NetCache.SharedInstance.LastResultBase.NewSessionId ;
 			}
 #else
-//			sid += NetCache.SharedInstance.LastResultBase.NewSessionId;
+			sid += m_lastEnabledSessionId;
 #endif
 			return sid;
 		}
@@ -78,5 +132,9 @@ namespace Net
             }
             return builder.ToString();
         }
+
+		private Action<NetResponse> m_didLoad;
+
+		private static int m_lastEnabledSessionId;    // 最後に受信した有効なセッションID
     }
 }

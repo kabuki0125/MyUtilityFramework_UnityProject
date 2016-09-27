@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/lobi_margin_middle"
+        android:layout_marginLeft="@dimen/lobi_margin_middle"
+        android:layout_marginRight="@dimen/lobi_margin_middle"
+        android:layout_marginTop="@dimen/lobi_margin_middle"
+        android:gravity="left" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:layout_marginRight="@dimen/lobi_margin_low"
+            android:src="@drawable/icn_btn_list_present" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lobi_authorized_root_header"
+                android:textColor="@color/lobi_brown" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lobi_authorized_root_header_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/lobi_button_s_white_selector"
+            android:padding="@dimen/lobi_padding_low" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/lobi_margin_low"
+                android:layout_marginRight="@dimen/lobi_margin_low" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lobi_open_prize_groups" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/lobi_margin_low"
+                    android:src="@drawable/lobi_icn_arrow_black" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.kayac.lobi.libnakamap.components.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.kayac.lobi.libnakamap.components.DividerView>
+
+</LinearLayout>
