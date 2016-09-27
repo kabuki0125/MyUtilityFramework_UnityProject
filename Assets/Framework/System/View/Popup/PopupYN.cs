@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.IO;
 using System.Collections;
@@ -14,10 +15,10 @@ public class PopupYN : ViewBase
 		m_didTapYes	= didTapYes;
 		m_didTapNo	= didTapNo;
 
-		this.GetScript<UILabel>("Lab_popup").text = msg;
+		this.GetScript<Text>("Lab_popup").text = msg;
 
-		this.SetButtonMsg("btn_yes", "DidTapYes");
-		this.SetButtonMsg("btn_no", "DidTapNo");
+		this.SetButtonMsg("btn_yes", DidTapYes);
+		this.SetButtonMsg("btn_no", DidTapNo);
 	}
 	
 	void PopupClose()

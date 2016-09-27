@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/lobi_action_bar_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/lobi_action_bar_button_menu_selector_01" />
+
+    <!-- ACCOUNT OR APPLICATION NAME -->
+
+    <LinearLayout
+        android:id="@+id/lobi_action_bar_account"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_action_bar_button_selector"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lobi_action_bar_account_name"
+            style="@style/lobi_textview_white_very_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/lobi_action_bar_account_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/lobi_padding_low"
+            android:paddingLeft="@dimen/lobi_margin_middle"
+            android:paddingRight="@dimen/lobi_margin_middle"
+            android:src="@drawable/lobi_icn_notice"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/lobi_icon_small"
+            android:layout_gravity="center_vertical|right"
+            android:paddingRight="@dimen/lobi_padding_low" >
+
+            <ImageView
+                android:id="@+id/lobi_action_bar_account_down_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/lobi_icn_actionbar_down" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

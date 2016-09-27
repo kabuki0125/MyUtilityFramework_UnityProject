@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout
+        android:id="@+id/lobi_search_back_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/lobi_padding_middle"
+        android:paddingRight="@dimen/lobi_padding_middle"
+        android:paddingBottom="@dimen/lobi_padding_middle"
+        android:orientation="horizontal"
+        >
+
+        <com.kayac.lobi.libnakamap.components.UIEditText
+            android:id="@+id/lobi_search_box_text_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/lobi_margin_low"
+            android:layout_marginRight="@dimen/lobi_margin_low"
+            android:layout_marginTop="@dimen/lobi_margin_high"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/lobi_icn_search"
+            android:drawablePadding="@dimen/lobi_padding_low"
+            android:focusable="true"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingBottom="@dimen/lobi_margin_middle"
+            android:background="@drawable/lobi_textbox_search_selector"
+            android:textColor="@color/lobi_text_black"
+            style="@style/lobi_textview_black_default"
+            />
+
+        <FrameLayout 
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/lobi_margin_low"
+            android:id="@+id/lobi_search_close"
+            >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/lobi_icn_delete" />
+        </FrameLayout>
+    </LinearLayout> 
+</merge>

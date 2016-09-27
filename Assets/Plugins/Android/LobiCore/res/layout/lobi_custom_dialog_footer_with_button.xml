@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lobi_pearl_gray"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lobi_custom_dialog_button_area_height"
+            android:layout_gravity="center_vertical"
+            android:background="@color/lobi_white"
+            android:orientation="horizontal"
+            >
+             <!-- cancel -->
+            <Button
+                android:id="@+id/lobi_custom_dialog_footer_cancel_button"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_gravity="center_vertical"
+                style="@style/lobi_custom_dialog_button"
+                android:visibility="gone"
+                />
+            <FrameLayout 
+                android:id="@+id/lobi_custom_dialog_footer_cancel_button_split"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lobi_pearl_gray"
+                android:visibility="gone"
+                />
+            <!-- negative -->
+            <Button
+                android:id="@+id/lobi_custom_dialog_footer_negative_button"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_gravity="center_vertical"
+                style="@style/lobi_custom_dialog_button"
+                android:visibility="gone"
+                />
+            <FrameLayout 
+                android:id="@+id/lobi_custom_dialog_footer_button_split"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lobi_pearl_gray"
+                android:visibility="gone"
+                />
+            <!-- ok -->
+            <Button
+                android:id="@+id/lobi_custom_dialog_footer_positive_button"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_gravity="center_vertical"
+                style="@style/lobi_custom_dialog_button"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

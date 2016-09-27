@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <integer name="lobi_arrow_animation_duration">200</integer>
+  <integer name="lobi_chat_megamenu_animation_duration">200</integer>
+  <integer name="lobi_chat_new_popup_animation_duration">500</integer>
+  <integer name="lobi_chat_new_popup_fade_out_duration">200</integer>
+  <integer name="lobi_light_box_animation_time">333</integer>
+  <integer name="lobi_light_box_configuration_changed_animation_time">777</integer>
+  <integer name="lobi_menu_popup_fade_in_duration">100</integer>
+</resources>

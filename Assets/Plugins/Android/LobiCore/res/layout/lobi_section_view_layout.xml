@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/lobi_padding_middle"
+    android:layout_marginTop="@dimen/lobi_padding_section"
+    android:background="@drawable/lobi_bg_light_repeat"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lobi_section_view_text"
+            style="@style/lobi_textview_brown_small_singleline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/lobi_padding_middle"
+            android:paddingLeft="@dimen/lobi_padding_high" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/lobi_section_view_sub_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/lobi_padding_low"
+                android:src="@drawable/lobi_btn_section_edit"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/lobi_section_view_sub_text"
+                style="@style/lobi_textview_brown_very_small_singleline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/lobi_padding_high"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lobi_section_underline"
+        android:layout_marginLeft="@dimen/lobi_padding_middle"
+        android:layout_marginRight="@dimen/lobi_padding_middle"
+        android:background="@color/lobi_brown"
+        android:paddingTop="@dimen/lobi_padding_middle" >
+    </FrameLayout>
+
+</LinearLayout>

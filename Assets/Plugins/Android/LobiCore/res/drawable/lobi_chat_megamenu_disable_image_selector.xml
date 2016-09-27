@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 無効の場合は、アイコンが30%透過になるように背景色の70%透過に設定 -->
+    <item
+        android:state_enabled="false"
+        android:state_pressed="false" >
+        <color android:color="@color/lobi_chat_megamenu_item_enable" />
+    </item>
+    
+    <item
+        android:state_enabled="false"
+        android:state_pressed="true" >
+        <color android:color="@color/lobi_chat_megamenu_item_enable" />
+    </item>
+    
+    <!-- 通常状態はなにもしないので透明 -->
+    <item >
+        <color android:color="@android:color/transparent"/>
+    </item>
+    
+</selector>

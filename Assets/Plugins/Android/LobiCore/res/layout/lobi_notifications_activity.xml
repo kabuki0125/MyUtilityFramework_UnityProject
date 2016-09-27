@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lobi_main_overlay"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/lobi_padding_middle"
+    android:paddingLeft="@dimen/lobi_padding_middle"
+    android:paddingRight="@dimen/lobi_padding_middle"
+    android:paddingTop="0dp" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="63dp"
+        android:scaleType="center"
+        android:src="@drawable/lobi_icn_notification_triangle" />
+
+    <LinearLayout
+        android:id="@+id/lobi_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_rectangle_white"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/lobi_textview_black_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/lobi_padding_middle"
+            android:paddingTop="@dimen/lobi_padding_middle"
+            android:text="@string/lobi_notification" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lobi_white_background" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/lobi_notification_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lobi_white_background"
+                android:cacheColorHint="@android:color/transparent"
+                android:clickable="false"
+                android:divider="@color/lobi_white_background"
+                android:dividerHeight="2dp"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lobi_notification_no_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lobi_white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/lobi_padding_high"
+                    android:src="@drawable/lobi_icn_nottification_none" />
+
+                <TextView
+                    style="@style/lobi_textview_gray_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lobisdk_no_notifications"
+                    android:textColor="@color/lobi_text_gray" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lobi_white_background" />
+
+        <LinearLayout
+            android:id="@+id/lobi_notification_login_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/lobi_padding_middle" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/lobi_notification_login_message"
+                    style="@style/lobi_textview_black_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lobisdk_lets_login_lobi" />
+
+                <TextView
+                    android:id="@+id/lobi_notification_login_description"
+                    style="@style/lobi_textview_gray_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lobisdk_login_features"
+                    android:textSize="@dimen/lobi_text_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lobi_notification_login_button"
+                style="@style/lobi_green_button_s"
+                android:layout_gravity="right|center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/lobi_margin_low"
+                    android:contentDescription="@string/lobisdk_login"
+                    android:src="@drawable/lobi_icn_login_white" />
+
+                <TextView
+                    android:id="@+id/lobi_notification_login_button_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lobisdk_login"
+                    android:textColor="@color/lobi_white_true"
+                    android:textSize="@dimen/lobi_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lobi_contact_list_empty_view_add_contact_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lobi_bg_light_repeat"
+    android:orientation="vertical" >
+
+    <com.kayac.lobi.libnakamap.components.SectionView
+        android:id="@+id/lobi_contact_list_header_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

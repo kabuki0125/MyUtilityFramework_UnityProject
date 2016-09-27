@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kayac.lobi.sdk"
+    android:versionCode="24"
+    android:versionName="6.4.10" >
+
+    <!-- Used for accessing nakamap APIs -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Used for chat notification streaming -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <meta-data
+            android:name="com.kayac.lobi.sdk.clientId"
+            android:value="ffc4651679570dfb7810d83b254949f3327682ea" >
+        </meta-data>
+        <meta-data
+            android:name="com.kayac.lobi.sdk.accountBaseName"
+            android:value="LobiSDK User" >
+        </meta-data>
+
+        <service android:name="com.kayac.lobi.sdk.service.AppInstallChecker" >
+        </service>
+        
+        <service android:name="com.kayac.nakamap.sdk.auth.NakamapAuthCallbackService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.kayac.nakamap.NAKAMAP_APP_AUTH_CALLBACK_ffc4651679570dfb7810d83b254949f3327682ea" />
+            </intent-filter>
+        </service>
+        
+        <receiver
+            android:name="com.kayac.lobi.sdk.receiver.AppInstallReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.ad.AdRecommendActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.invitation.InvitationWebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.invitation.InvitationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="invited"
+                    android:scheme="nakamap" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.RootActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/lobisdk_lobi_activity_theme"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="nakamapapp-ffc4651679570dfb7810d83b254949f3327682ea" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.profile.ProfileActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.profile.ProfileEditActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.stamp.StampActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.CreateNewGroupActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.setting.WebViewSetting"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.ContactListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.UserFollowerListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.ContactRecommendedActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.menu.MenuActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.AppDownloadActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

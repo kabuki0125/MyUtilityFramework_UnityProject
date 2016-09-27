@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <string-array name="lobi_chat_megamenu_label_2">
+    <item>@null</item>
+    <item>@null</item>
+    <item>@null</item>
+    <item>@null</item>
+    <item>@string/lobi_shout_off</item>
+    <item>@null</item>
+  </string-array>
+</resources>

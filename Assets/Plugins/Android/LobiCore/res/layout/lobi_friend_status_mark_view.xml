@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/lobi_friend_status_mark_background"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="@drawable/lobi_friend_status_on" >
+
+        <ImageView
+            android:id="@+id/lobi_friend_status_mark_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/lobi_margin_low"
+            android:contentDescription="@null"
+            android:src="@drawable/lobi_icn_popup_friends" />
+
+        <TextView
+            android:id="@+id/lobi_friend_status_mark_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/lobi_you_are_friends"
+            android:textColor="@color/lobi_text_white"
+            android:textSize="@dimen/lobi_text_very_small" />
+    </FrameLayout>
+
+</merge>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lobi_chat_edit_tools_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/lobi_padding_high"
+            android:layout_marginRight="@dimen/lobi_padding_high"
+            android:layout_weight="1" >
+
+            <com.kayac.lobi.libnakamap.components.UIEditText
+                android:id="@+id/lobi_chat_edit"
+                style="@style/lobi_textview_black_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/lobi_padding_high"
+                android:background="@drawable/lobi_textbox_edit_selector"
+                android:gravity="top|left"
+                android:paddingBottom="24dp"
+                android:paddingLeft="@dimen/lobi_padding_middle"
+                android:paddingRight="@dimen/lobi_padding_middle" />
+
+            <TextView
+                android:id="@+id/lobi_chat_edit_counter"
+                style="@style/lobi_textview_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/lobi_padding_middle"
+                android:layout_marginRight="@dimen/lobi_padding_middle"
+                android:focusable="false"
+                android:gravity="top|right"
+                android:paddingBottom="12dp"
+                android:singleLine="true"
+                android:text="255" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp" >
+
+            <FrameLayout
+                android:id="@+id/lobi_chat_edit_start_stamp"
+                android:layout_width="@dimen/lobi_button_mini"
+                android:layout_height="@dimen/lobi_button_mini"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/lobi_button_s_white_selector"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:duplicateParentState="true"
+                    android:scaleType="center"
+                    android:src="@drawable/lobi_chat_stamp_selector" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/lobi_button_mini"
+                android:layout_height="@dimen/lobi_button_mini"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/lobi_padding_high" >
+
+                <com.kayac.lobi.sdk.chat.activity.ChatEditPictureButton
+                    android:id="@+id/lobi_chat_edit_picture"
+                    android:layout_width="@dimen/lobi_button_mini"
+                    android:layout_height="@dimen/lobi_button_mini" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/lobi_chat_edit_photo_counter"
+                style="@style/lobi_textview_gray_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/lobi_padding_low"
+                android:singleLine="true"
+                android:text="Photos" />
+
+            <FrameLayout
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/lobi_chat_edit_post"
+                style="@style/lobi_orange_button_s"
+                android:layout_width="75dp"
+                android:layout_height="@dimen/lobi_button_mini"
+                android:layout_marginLeft="12dp"
+                android:text="@string/lobi_send" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

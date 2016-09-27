@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/lobi_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_bg_light_repeat"
+        android:orientation="vertical" >
+
+        <com.kayac.lobi.libnakamap.components.ActionBar
+            android:id="@+id/lobi_action_bar"
+            style="@style/lobi_action_bar"
+            lobi:lobi_content_type="lobi_backable"
+            lobi:lobi_text="" />
+
+        <!-- 公開グループに参加する -->
+
+        <com.kayac.lobi.libnakamap.components.InputAreaMaskView
+            android:id="@+id/lobi_chat_public_join_frame"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lobi_chat_edit_frame"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/lobi_white_true"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:id="@+id/lobi_chat_edit_start_stamp"
+                android:layout_width="@dimen/lobi_button_mini"
+                android:layout_height="@dimen/lobi_button_mini"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/lobi_margin_middle"
+                android:background="@drawable/lobi_button_s_white_selector"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:duplicateParentState="true"
+                    android:scaleType="center"
+                    android:src="@drawable/lobi_chat_stamp_selector" />
+            </FrameLayout>
+
+            <com.kayac.lobi.sdk.chat.activity.ChatEditPictureButton
+                android:id="@+id/lobi_chat_edit_picture"
+                android:layout_width="@dimen/lobi_button_mini"
+                android:layout_height="@dimen/lobi_button_mini"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/lobi_margin_middle" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="9dp"
+                android:paddingLeft="@dimen/lobi_padding_high"
+                android:paddingRight="@dimen/lobi_padding_high"
+                android:paddingTop="8dp" >
+
+                <TextView
+                    android:id="@+id/lobi_chat_edit_start_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/lobi_textbox_edit_selector"
+                    android:gravity="center_vertical"
+                    android:hint="@string/lobi_input_message"
+                    android:paddingLeft="@dimen/lobi_padding_middle" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <com.kayac.lobi.libnakamap.components.ImageLoaderView
+                android:id="@+id/lobi_chat_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                lobi:lobi_bitmapConfig="lobi_rgb_565" />
+
+            <ListView
+                android:id="@+id/lobi_chat_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:clickable="false"
+                android:divider="@android:color/transparent"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:scrollbars="none" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/lobi_img_shadow" />
+
+            <com.kayac.lobi.libnakamap.components.ChatNewPopup
+                android:id="@+id/lobi_chat_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

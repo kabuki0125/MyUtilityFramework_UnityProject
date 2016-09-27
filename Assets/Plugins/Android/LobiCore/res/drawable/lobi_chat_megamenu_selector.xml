@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 無効の場合は、タップ時に色を変更しない -->
+    <item
+        android:state_enabled="false"
+        android:state_pressed="false" >
+        <color android:color="@color/lobi_chat_megamenu_background" />
+    </item>
+    
+    <item
+        android:state_enabled="false"
+        android:state_pressed="true" >
+        <color android:color="@color/lobi_chat_megamenu_background" />
+    </item>
+    
+    <!-- メニュータップ時 -->
+    <item
+        android:state_enabled="true" 
+        android:state_pressed="true" >
+        <color android:color="@color/lobi_chat_megamenu_pressed" />
+    </item>
+    
+    <!-- デフォルト -->
+    <item >
+        <color android:color="@color/lobi_chat_megamenu_background" />
+    </item>
+</selector>

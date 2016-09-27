@@ -11,6 +11,6 @@ public class Boot : MonoBehaviour
 		while(!AppCore.IsInit){
 			yield return null;	// AppCoreの準備を待つ
 		}
-		ScreenChanger.SharedInstance.GoToTitle();
+		ScreenChanger.SharedInstance.GoToTitle();	// TODO : 初めのシーンに移動.
 	}
 }

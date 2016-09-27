@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lobi_white_true"
+    android:paddingBottom="@dimen/lobi_padding_middle"
+    android:paddingLeft="@dimen/lobi_padding_high"
+    android:paddingRight="@dimen/lobi_padding_high"
+    android:paddingTop="@dimen/lobi_padding_middle" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/lobi_chat_public_join_message"
+            style="@style/lobi_textview_black_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/lobi_join_to_see_reply" />
+
+        <Button
+            android:id="@+id/lobi_chat_public_join_button"
+            style="@style/lobi_green_button_s"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|right"
+            android:minWidth="56dp"
+            android:text="@string/lobi_join_short" />
+    </RelativeLayout>
+
+</FrameLayout>

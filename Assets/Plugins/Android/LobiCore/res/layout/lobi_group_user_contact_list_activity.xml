@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <view
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.kayac.lobi.libnakamap.components.MenuDrawer$ContentFrame"
+        android:background="@color/lobi_white_background"
+        android:orientation="vertical" >
+
+        <com.kayac.lobi.libnakamap.components.ActionBar
+            android:id="@+id/lobi_action_bar"
+            style="@style/lobi_action_bar"
+            lobi:lobi_content_type="lobi_manual"
+            lobi:lobi_text="@string/lobi_add_friend" />
+
+        <com.kayac.lobi.libnakamap.components.SearchBox
+            android:id="@+id/lobi_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            lobi:lobi_closeButton="false"
+            lobi:lobi_searchHintText="@string/lobi_search_search_by_name" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" >
+
+            <ListView
+                android:id="@+id/lobi_group_contacts_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lobi_white_background"
+                android:divider="@color/lobi_white_background"
+                android:dividerHeight="1dp"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:overScrollMode="never" />
+
+            <LinearLayout
+                android:id="@+id/lobi_contacts_list_empty_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/lobi_padding_section"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/lobi_no_contact_textview"
+                    style="@style/lobi_textview_pearl_gray_large_singleline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/lobi_padding_high"
+                    android:drawableTop="@drawable/lobi_icn_lock_group"
+                    android:gravity="center"
+                    android:text="@string/lobi_follow_list_no_item" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lobi_contacts_list_empty_banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/lobi_margin_extra_large"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/lobi_no_contact_banner_textview"
+                    style="@style/lobi_textview_black_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/lobi_padding_middle" />
+
+                <com.kayac.lobi.sdk.view.LobiBannerView
+                    android:id="@+id/lobi_no_contact_banner_bannerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    lobi:lobi_showTextOnly="true" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </view>
+    <!-- The navigation drawer -->
+
+    <include
+        android:id="@+id/menu_drawer"
+        layout="@layout/lobi_menu_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

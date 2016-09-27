@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lobi_white_true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lobi_profile_profile_lobi_account_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/lobi_padding_middle"
+        android:background="@drawable/lobi_lobi_account_area_background"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lobi_profile_lobi_account_section_height"
+            android:background="@drawable/lobi_lobi_account_area_background_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/lobi_margin_middle" >
+
+            <FrameLayout
+                android:id="@+id/lobi_profile_profile_lobi_account_icon_frame"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="@dimen/lobi_margin_middle"
+                android:visibility="gone" >
+
+                <com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
+                    android:id="@+id/lobi_profile_profile_lobi_account_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/lobi_profile_profile_lobi_account_name"
+                    style="@style/lobi_textview_black_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/lobisdk_lets_login_lobi"
+                    android:textSize="@dimen/lobi_text_default" />
+
+                <TextView
+                    android:id="@+id/lobi_profile_profile_lobi_account_status"
+                    style="@style/lobi_textview_gray_small_singleline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/lobisdk_check_activity"
+                    android:textColor="@color/lobi_section_text"
+                    android:textSize="@dimen/lobi_text_small" />
+            </LinearLayout>
+
+            <com.kayac.lobi.libnakamap.components.LobiFollowButton
+                android:id="@+id/lobi_profile_profile_lobi_account_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lobi_profile_profile_lobi_account_friend_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lobi_profile_lobi_account_section_divider"
+                android:background="@color/lobi_white_true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lobi_profile_lobi_account_section_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/lobi_profile_profile_lobi_account_contacts_column"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/lobi_lobi_account_area_background_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/lobi_margin_middle"
+                    android:paddingRight="@dimen/lobi_margin_section" >
+
+                    <TextView
+                        style="@style/lobi_textview_gray_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/lobisdk_follow_list"
+                        android:textColor="@color/lobi_section_text" />
+
+                    <TextView
+                        android:id="@+id/lobi_profile_profile_lobi_account_contacts_count"
+                        style="@style/lobi_textview_black_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/lobi_profile_lobi_account_section_divider"
+                    android:layout_height="match_parent"
+                    android:background="@color/lobi_white_true" />
+
+                <LinearLayout
+                    android:id="@+id/lobi_profile_profile_lobi_account_followers_column"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/lobi_lobi_account_area_background_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/lobi_margin_middle"
+                    android:paddingRight="@dimen/lobi_margin_section" >
+
+                    <TextView
+                        style="@style/lobi_textview_gray_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/lobisdk_follower_list"
+                        android:textColor="@color/lobi_section_text" />
+
+                    <TextView
+                        android:id="@+id/lobi_profile_profile_lobi_account_followers_count"
+                        style="@style/lobi_textview_black_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- USER DESCRIPTION -->
+
+    <com.kayac.lobi.libnakamap.components.CustomTextView
+        android:id="@+id/lobi_profile_profile_cover_content_description"
+        style="@style/lobi_textview_black_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lobi_margin_high"
+        android:layout_marginRight="@dimen/lobi_margin_high"
+        android:layout_marginTop="@dimen/lobi_padding_section"
+        android:autoLink="all"
+        android:background="@drawable/lobi_profile_textbox_edit_selector"
+        android:focusable="false"
+        android:inputType="textMultiLine"
+        android:paddingBottom="@dimen/lobi_padding_section" />
+
+    <com.kayac.lobi.libnakamap.components.CustomLargeButton
+        android:id="@+id/lobi_profile_profile_cover_content_transfer_leader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/lobi_margin_section"
+        android:visibility="gone"
+        lobi:lobi_custom_large_button_background="@drawable/lobi_button_l_white_selector"
+        lobi:lobi_custom_large_button_image="@drawable/lobi_icn_btn_leader"
+        lobi:lobi_custom_large_button_text="@string/lobi_transfer_leader"
+        lobi:lobi_custom_large_button_text_color="@color/lobi_black" />
+
+    <!-- 公開グループ -->
+
+    <LinearLayout
+        android:id="@+id/lobi_profile_profile_cover_content_public_groups_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lobi_bg_light_repeat"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lobi_profile_banner_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/lobi_padding_high"
+            android:paddingRight="@dimen/lobi_padding_high"
+            android:paddingTop="@dimen/lobi_padding_high" >
+
+        </LinearLayout>
+
+        <!-- 見出し: 投稿したプレイ動画 -->
+
+        <com.kayac.lobi.libnakamap.components.SectionView
+            android:id="@+id/lobi_profile_rec_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            lobi:lobi_section_option_button="true"
+            lobi:lobi_section_title="@string/lobisdk_rec" />
+
+        <!-- 投稿した動画リスト -->
+
+        <LinearLayout
+            android:id="@+id/lobi_profile_profile_cover_content_video_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lobi_margin_middle"
+            android:orientation="vertical" />
+
+        <!-- バナー: 動画を投稿していません -->
+
+        <TextView
+            android:id="@+id/lobi_profile_profile_cover_content_video_area_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/lobi_margin_middle"
+            android:layout_marginRight="@dimen/lobi_margin_middle"
+            android:text="@string/lobisdk_video_list_none"
+            android:visibility="gone" />
+
+        <!-- 動画リストをもっと見る -->
+
+        <com.kayac.lobi.libnakamap.components.ListRow
+            android:id="@+id/lobi_profile_profile_cover_content_video_area_read_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
+            lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
+            lobi:lobi_leftContentVisible="false"
+            lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+
+        <!-- 見出し: ランキング -->
+
+        <com.kayac.lobi.libnakamap.components.SectionView
+            android:id="@+id/lobi_profile_ranking_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            lobi:lobi_section_option_button="true"
+            lobi:lobi_section_title="@string/lobisdk_ranking" />
+
+        <!-- ランキングリスト -->
+
+        <LinearLayout
+            android:id="@+id/lobi_profile_profile_cover_content_ranking_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lobi_margin_middle"
+            android:orientation="vertical" />
+
+        <!-- ランキングをもっと見る -->
+
+        <com.kayac.lobi.libnakamap.components.ListRow
+            android:id="@+id/lobi_profile_profile_cover_content_ranking_area_read_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
+            lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
+            lobi:lobi_leftContentVisible="false"
+            lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+        
+        <com.kayac.lobi.sdk.view.LobiBannerView
+            android:id="@+id/lobi_profile_profile_cover_content_lobi_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/lobi_padding_high"
+            android:layout_marginRight="@dimen/lobi_padding_high"
+            android:paddingTop="@dimen/lobi_padding_high"
+            android:visibility="gone" />
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lobi_bg_light_repeat"
+    android:orientation="vertical" >
+
+    <com.kayac.lobi.libnakamap.components.ActionBar
+        android:id="@+id/lobi_action_bar"
+        style="@style/lobi_action_bar"
+        lobi:lobi_content_type="lobi_backable"
+        lobi:lobi_text="@string/lobi_group_settings" />
+
+    <com.kayac.lobi.libnakamap.components.SearchBox
+        android:id="@+id/lobi_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        lobi:lobi_closeButton="false"
+        lobi:lobi_searchHintText="@string/lobi_search_search_by_name" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/lobi_img_shadow" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" >
+
+        <ListView
+            android:id="@+id/lobi_chat_group_info_change_leader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:divider="@drawable/lobi_line_drawable"
+            android:dividerHeight="@dimen/lobi_section_divider_with_padding"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="true"
+            android:overScrollMode="never" />
+
+        <FrameLayout
+            android:id="@+id/lobi_group_contacts_list_empty_view_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

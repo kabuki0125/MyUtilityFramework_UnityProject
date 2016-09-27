@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="77dp"
+    android:layout_gravity="top"
+    android:paddingBottom="@dimen/lobi_padding_high" >
+
+    <com.kayac.lobi.libnakamap.components.ImageLoaderView
+        android:id="@+id/lobi_lobi_banner_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lobi_pearl_gray"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lobi_lobi_banner_gradient"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <com.kayac.lobi.libnakamap.components.ImageLoaderView
+            android:id="@+id/lobi_lobi_banner_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/lobi_lobi_banner_app_name"
+                style="@style/lobi_textview_white_small_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textSize="@dimen/lobi_text_large" />
+
+            <TextView
+                android:id="@+id/lobi_lobi_banner_description"
+                style="@style/lobi_textview_white_small_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.kayac.lobi.libnakamap.components.RoundCornerOverlayView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        lobi:lobi_color="@color/lobi_white_background"
+        lobi:lobi_radius="3dp" />
+
+</FrameLayout>
