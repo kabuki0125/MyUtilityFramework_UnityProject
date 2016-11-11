@@ -22,7 +22,7 @@ public class LocalNotificationManager : MonoBehaviour
     
     void OnApplicationPause(bool bPause)
     {
-        if(false/*TODO : ローカル通知設定がなければ*/){
+        if(!LocalDataManager.Data.IsNotificate){
             return;
         }
         
@@ -37,7 +37,7 @@ public class LocalNotificationManager : MonoBehaviour
     
     void OnApplicationQuit()
     {
-        if(false/*TODO : ローカル通知設定がなければ*/){
+        if(!LocalDataManager.Data.IsNotificate){
             return;
         }
         
