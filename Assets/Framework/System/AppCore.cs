@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿//using UnityEngine;
 using System.Collections;
 using MyLibrary.Unity;
 
@@ -31,9 +31,6 @@ public class AppCore : ViewBase
         FileUtility.CreateDirectory( GameSystem.CachesDirectoryPath + "/0000" );
         FileUtility.CreateDirectory( GameSystem.CachesDirectoryPath + "/0001" );
         FileUtility.CreateDirectory( GameSystem.CachesDirectoryPath + "/0002" );
-        
-        // ローカルデータロード.
-        LocalDataManager.Load();
     }
 	IEnumerator Start()
 	{

@@ -104,5 +104,21 @@ public class ObjectGenerator : MonoBehaviour
         return null;
     }
     
+    /// <summary>
+    /// 可変長な数のobjectを追加する.
+    /// </summary>
+    public void AddPrefab(params Object[] objects)
+    {
+        var list = new List<Object>(prefabs);
+        foreach(var obj in objects){
+            list.Add(obj);
+        }
+        // リスト整形(nullになっている隙間を削除し、A~Z順に並べ替え)
+        list.RemoveAll(o => o == null);
+        list.Sort((x, y) => x.name.CompareTo(y.name));
+        
+        prefabs = list.ToArray();
+    }
+    
     private Dictionary<string, UnityEngine.Object> m_dontDestroyList = new Dictionary<string, UnityEngine.Object>();
 }

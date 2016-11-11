@@ -236,8 +236,8 @@ public class SoundControll : ViewBase
     }
     void Start()
     {
-        this.VolumeBGM = LocalDataManager.Data.Volume_BGM;
-        this.VolumeSE = LocalDataManager.Data.Volume_SE;
+//        this.VolumeBGM = LocalDataManager.Data.Volume_BGM;
+//        this.VolumeSE = LocalDataManager.Data.Volume_SE;
         InvokeRepeating("UpdateTracksSE", 0.5f, 0.5f);
     }
     // SEの再生状況更新.
